@@ -1,0 +1,15 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  become: no
+  roles:
+    - apt
+
+  vars_prompt:
+    - name: "user_name"
+      prompt: "Please enter your name (ex. Haruomi Hoshono)"
+      private: no
+
+    - name: "email"
+      prompt: "please enter your email address"
+      private: no

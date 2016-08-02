@@ -1,0 +1,9 @@
+- name: apt-get update
+  apt: update_cache=yes
+
+- name: apt-get upgrade
+  apt: upgrade=dist
+
+- name: install packages
+  apt: name={{ item.name }} state={{ item.state|default("latest") }} install_options={{ item.install_options|default() }}
+  with_items: homebrew_packages
