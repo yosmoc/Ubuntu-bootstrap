@@ -7,7 +7,8 @@
 
 ## Install ansible
 ```
-brew install ansible
+sudo apt-get install python-pip
+sudo pip install ansible
 ```
 
 ## Usage
