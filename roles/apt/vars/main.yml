@@ -1,24 +1,19 @@
 apt_packages:
-  - { name: ack }
-  - { name: ag }
-  - { name: ansible }
-  - { name: cask }
+  - { name: ack-grep }
   - { name: cmigemo }
   - { name: emacs }
   - { name: ghq }
   - { name: gibo }
   - { name: gist }
   - { name: git }
-  - { name: go }
-  - { name: hg }
+  - { name: golang }
   - { name: hub }
+  - { name: mercurial }
   - { name: mosh }
   - { name: node }
   - { name: p7zip }
-  - { name: peco }
-  - { name: pt }
-  - { name: pyenv }
   - { name: rbenv }
+  - { name: silversearcher-ag }
   - { name: tig }
   - { name: tmux }
   - { name: vim }
