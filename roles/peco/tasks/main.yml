@@ -1,0 +1,21 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: Get latest peco version
+  shell: >
+    curl -sI https://github.com/peco/peco/releases/latest | awk -F'/' '/^Location:/{print $NF}'
+  register: peco_latest_version
+
+- name: Download latest peco
+  get_url: url=https://github.com/peco/peco/releases/download/{{ peco_latest_version.stdout }}/peco_linux_amd64.tar.gz dest={{ workdir_result.stdout }}/peco_linux_amd64.tar.gz
+
+- name: Extract peco
+  unarchive: src={{ workdir_result.stdout }}/peco_linux_amd64.tar.gz dest={{ workdir_result.stdout }} copy=no
+
+- name: Copy to /usr/bin/
+  command: cp {{ workdir_result.stdout }}/peco_linux_amd64/peco /usr/bin/
+  become: yes

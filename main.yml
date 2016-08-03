@@ -8,6 +8,7 @@
     - tig
     - tmux
     - ghq
+    - peco
 
   vars_prompt:
     - name: "user_name"
