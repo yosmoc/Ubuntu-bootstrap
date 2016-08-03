@@ -3,9 +3,6 @@ set-option -g prefix C-t
 
 # zsh
 set -g default-shell /usr/bin/zsh
-# encoding
-set-window-option -g utf8 on
-set-option -g status-utf8 on
 
 # base index
 set-option -g base-index 1
@@ -24,11 +21,7 @@ bind 2 split-window -v
 bind 3 split-window -h
 
 # mouse
-set -g mode-mouse on
-set -g mouse-resize-pane on
-set -g mouse-select-pane on
-set -g mouse-select-window on
-set-option -g mouse-select-pane on
+set -g mouse on
 
 # status
 set-option -g status-interval 5
