@@ -1,2 +1,34 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: Get latest tig version
+  shell: >
+    curl -sI https://github.com/jonas/tig/releases/latest | awk -F'/' '/^Location:/{print $NF}'
+  register: tig_latest_version
+
+- name: Download latest tig
+  get_url: url=https://github.com/jonas/tig/archive/{{ tig_latest_version.stdout }}.tar.gz dest={{ workdir_result.stdout }}/
+
+- name: Extract tig
+  unarchive: src={{ workdir_result.stdout }}/tig-{{ tig_latest_version.stdout }}.tar.gz dest={{ workdir_result.stdout }} copy=no
+
+- name: make
+  make:
+    chdir: "{{ workdir_result.stdout }}/tig-{{ tig_latest_version.stdout }}"
+    params:
+      prefix: /usr/
+
+- name: make install
+  make:
+    chdir: "{{ workdir_result.stdout }}/tig-{{ tig_latest_version.stdout }}"
+    target: install
+    params:
+      prefix: /usr/
+  become: yes
+
 - name: copy .tigrc
   template: src=.tigrc.j2 dest=~/.tigrc mode=0644
