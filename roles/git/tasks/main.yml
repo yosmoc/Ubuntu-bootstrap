@@ -8,4 +8,4 @@
   git_config: name=user.email scope=global value="{{ user_email }}"
 
 - name: set core.autocrlf
-  git_config: name=core.autocrlf scope=global value=true
+  git_config: name=core.autocrlf scope=global value=input
