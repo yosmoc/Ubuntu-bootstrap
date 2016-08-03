@@ -5,6 +5,7 @@
   roles:
     - apt
     - oh-my-zsh
+    - tig
 
   vars_prompt:
     - name: "user_name"

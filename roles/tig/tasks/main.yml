@@ -1,0 +1,2 @@
+- name: copy .tigrc
+  template: src=.tigrc.j2 dest=~/.tigrc mode=0644
