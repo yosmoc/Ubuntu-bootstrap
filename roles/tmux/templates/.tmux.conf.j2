@@ -34,7 +34,3 @@ set-option -g message-bg red
 
 # color
 set-option -g default-terminal "screen-256color"
-
-# clipboard
-set-option -g default-command "reattach-to-user-namespace -l $SHELL"
-bind C-q run-shell 'reattach-to-user-namespace tmux-pbcopy'
