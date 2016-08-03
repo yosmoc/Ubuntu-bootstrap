@@ -4,6 +4,7 @@
   become: no
   roles:
     - apt
+    - oh-my-zsh
 
   vars_prompt:
     - name: "user_name"

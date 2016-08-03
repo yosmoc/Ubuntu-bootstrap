@@ -1,0 +1,20 @@
+- name: Installing oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
+  git: repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
+
+- name: Creating new ~/.zshrc
+  copy: src=~/.oh-my-zsh/templates/zshrc.zsh-template dest=~/.zshrc
+
+- name: copy general setting to .oh-my-zsh/custom
+  template: src=general.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy peco setting to .oh-my-zsh/custom
+  template: src=peco.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy golang setting to .oh-my-zsh/custom
+  template: src=go.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy rbenv setting to .oh-my-zsh/custom
+  template: src=rbenv.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy tmux setting to .oh-my-zsh/custom
+  template: src=tmux.zsh dest=~/.oh-my-zsh/custom/ mode=0644
