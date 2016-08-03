@@ -6,6 +6,7 @@
     - apt
     - oh-my-zsh
     - tig
+    - tmux
 
   vars_prompt:
     - name: "user_name"
