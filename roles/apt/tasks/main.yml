@@ -8,10 +8,13 @@
 
 - name: apt-get update
   apt: update_cache=yes
+  become: yes
 
 - name: apt-get upgrade
   apt: upgrade=dist
+  become: yes
 
 - name: install packages
-  apt: name={{ item.name }} state={{ item.state|default("latest") }} install_options={{ item.install_options|default() }}
-  with_items: homebrew_packages
+  apt: name="{{ item.name }}" state="{{ item.state|default("latest") }}"
+  with_items: "{{apt_packages}}"
+  become: yes
