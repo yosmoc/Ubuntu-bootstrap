@@ -8,6 +8,7 @@
     - tig
     - tmux
     - ghq
+    - git
     - peco
 
   vars_prompt:
@@ -15,6 +16,6 @@
       prompt: "Please enter your name (ex. Haruomi Hoshono)"
       private: no
 
-    - name: "email"
+    - name: "user_email"
       prompt: "please enter your email address"
       private: no

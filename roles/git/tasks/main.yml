@@ -1,0 +1,11 @@
+- name: Set ghq.root to $GOPATH/src
+  git_config: name=ghq.root scope=global value=$GOPATH/src
+
+- name: set user.name
+  git_config: name=user.name scope=global value="{{ user_name }}"
+
+- name: set user.email
+  git_config: name=user.email scope=global value="{{ user_email }}"
+
+- name: set core.autocrlf
+  git_config: name=core.autocrlf scope=global value=true
