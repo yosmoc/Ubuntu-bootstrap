@@ -1,0 +1,12 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: git clone dircolors solarized
+  git: repo=https://github.com/huyz/dircolors-solarized.git dest={{ workdir_result.stdout }}/dircolors-solarized
+
+- name: copy to .dircolors
+  command: cp {{ workdir_result.stdout }}/dircolors-solarized/dircolors.ansi-universal ~/.dircolors

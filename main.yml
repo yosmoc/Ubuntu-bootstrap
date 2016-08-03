@@ -4,6 +4,7 @@
   become: no
   roles:
     - apt
+    - color
     - oh-my-zsh
     - tig
     - tmux

@@ -18,3 +18,6 @@
 
 - name: copy tmux setting to .oh-my-zsh/custom
   template: src=tmux.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy color setting to .oh-my-zsh/custom
+  template: src=color.zsh dest=~/.oh-my-zsh/custom/ mode=0644
