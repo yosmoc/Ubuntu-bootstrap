@@ -1,0 +1,8 @@
+- name: Install ghq
+  command: go get github.com/motemen/ghq
+
+# - name: Install github-list-starred
+#   command: go get github.com/motemen/github-list-starred
+#
+# - name: Import github starred repository
+#   command: github-list-starred yosmoc | ghq import
