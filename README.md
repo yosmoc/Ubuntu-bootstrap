@@ -6,9 +6,11 @@
 - Ansbile
 
 ## Install ansible
+
 ```
-sudo apt-get install python-pip
-sudo pip install ansible
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install ansible
 ```
 
 ## Usage
