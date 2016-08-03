@@ -13,7 +13,6 @@ apt_packages:
   - { name: rbenv }
   - { name: silversearcher-ag }
   - { name: tig }
-  - { name: tmux }
   - { name: vim }
   - { name: wget }
   - { name: zsh }

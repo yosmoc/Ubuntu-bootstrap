@@ -1,2 +1,34 @@
+- name: install tmux dependencies
+  apt: name="{{ item.name }}" state="{{ item.state|default("latest") }}"
+  with_items: "{{apt_packages}}"
+  become: yes
+
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: git clone latest tmux
+  git: repo=https://github.com/tmux/tmux.git dest={{ workdir_result.stdout }}/tmux
+
+- name: run autogen.sh
+  command: sh autogen.sh
+  args:
+    chdir: "{{ workdir_result.stdout }}/tmux"
+
+- name: configure tmux
+  command: ./configure
+  args:
+    chdir: "{{ workdir_result.stdout }}/tmux"
+
+- name: make
+  make: chdir={{ workdir_result.stdout }}/tmux
+
+- name: make install
+  make: chdir={{ workdir_result.stdout }}/tmux target=install
+  become: yes
+
 - name: copy .tmux.conf
   template: src=.tmux.conf.j2 dest=~/.tmux.conf mode=0644
