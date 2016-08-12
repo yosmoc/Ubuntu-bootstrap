@@ -1,0 +1,5 @@
+- name: Installing percol
+  pip: name=percol
+
+- name: copy setting to ~/.percol.d/
+  template: src=rc.py dest=~/.percol.d/ mode=0644

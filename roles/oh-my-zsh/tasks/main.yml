@@ -10,6 +10,9 @@
 - name: copy peco setting to .oh-my-zsh/custom
   template: src=peco.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 
+- name: copy percol setting to .oh-my-zsh/custom
+  template: src=percol.zsh dest=~/.oh-my-zsh/custom mode=0644
+
 - name: copy golang setting to .oh-my-zsh/custom
   template: src=go.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 

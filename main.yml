@@ -11,6 +11,7 @@
     - ghq
     - git
     - peco
+    - percol
 
   vars_prompt:
     - name: "user_name"
