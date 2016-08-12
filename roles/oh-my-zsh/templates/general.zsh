@@ -1,1 +1,1 @@
-export LANG=C
+export LANG=en_US.UTF-8
