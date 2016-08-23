@@ -1,6 +1,7 @@
 apt_packages:
   - { name: ack-grep }
   - { name: cmigemo }
+  - { name: cpputest }
   - { name: emacs }
   - { name: gist }
   - { name: git }
