@@ -7,6 +7,7 @@ apt_packages:
   - { name: git }
   - { name: golang }
   - { name: hub }
+  - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
   - { name: node }
