@@ -16,4 +16,5 @@ apt_packages:
   - { name: silversearcher-ag }
   - { name: vim }
   - { name: wget }
+  - { name: zip }
   - { name: zsh }
