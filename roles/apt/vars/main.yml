@@ -11,6 +11,7 @@ apt_packages:
   - { name: mercurial }
   - { name: mosh }
   - { name: node }
+  - { name: pandoc }
   - { name: p7zip }
   - { name: rbenv }
   - { name: silversearcher-ag }
