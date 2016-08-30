@@ -7,6 +7,9 @@
 - name: copy general setting to .oh-my-zsh/custom
   template: src=general.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 
+- name: copy general setting to .oh-my-zsh/ghc
+  template: src=ghc.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
 - name: copy peco setting to .oh-my-zsh/custom
   template: src=peco.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 

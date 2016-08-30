@@ -1,0 +1,1 @@
+export GHCRTS=-V0
