@@ -9,3 +9,6 @@
 
 - name: set core.autocrlf
   git_config: name=core.autocrlf scope=global value=input
+
+- name: set core.preloadindex
+  git_config: name=core.preloadindex scope=global value=true
