@@ -1,3 +1,7 @@
+- name: add apt repository for git
+  apt_repository: repo='ppa:git-core/ppa'
+  become: yes
+
 - name: add apt repository for hub
   apt_repository: repo='ppa:cpick/hub'
   become: yes
