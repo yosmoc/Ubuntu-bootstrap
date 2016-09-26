@@ -12,3 +12,6 @@
 
 - name: set core.preloadindex
   git_config: name=core.preloadindex scope=global value=true
+
+- name: set commit.verbose
+  git_config: name=commit.verbose scope=global value=true
