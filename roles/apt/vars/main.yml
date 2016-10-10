@@ -6,6 +6,7 @@ apt_packages:
   - { name: git }
   - { name: golang }
   - { name: hub }
+  - { name: imagemagick }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
