@@ -10,6 +10,9 @@
 - name: set core.autocrlf
   git_config: name=core.autocrlf scope=global value=input
 
+- name: set core.fscache
+  git_config: name=core.fscache scope=global value=true
+
 - name: set core.preloadindex
   git_config: name=core.preloadindex scope=global value=true
 
