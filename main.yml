@@ -3,15 +3,15 @@
   gather_facts: no
   become: no
   roles:
-    - apt
-    - color
-    - oh-my-zsh
-    - tig
-    - tmux
-    - ghq
-    - git
-    - peco
-    - percol
+    - { role: apt, tags: [ apt ] }
+    - { role: color, tags: [ color ] }
+    - { role: oh-my-zsh, tags: [ oh-my-zsh ] }
+    - { role: tig, tags: [ tig ] }
+    - { role: tmux, tags: [ tmux ] }
+    - { role: ghq, tags: [ ghq ] }
+    - { role: git, tags: [ git ] }
+    - { role: peco, tags: [ peco ] }
+    - { role: percol, tags: [ percol ] }
 
   vars_prompt:
     - name: "user_name"
