@@ -2,6 +2,7 @@ apt_packages:
   - { name: ack-grep }
   - { name: cmigemo }
   - { name: emacs }
+  - { name: gdb-arm-none-eabi }
   - { name: gist }
   - { name: git }
   - { name: golang }
