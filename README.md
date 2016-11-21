@@ -16,13 +16,13 @@ $ sudo apt-get install ansible
 
 ## Usage
 
-### run all roles
+### Run all roles
 
 ```
 $ ansible-playbook -i hosts main.yml -K
 ```
 
-### run specific roles
+### Run specific roles
 
 ```
 $ ansible-playbook -i hosts main.yml -K --tags "apt,git"
