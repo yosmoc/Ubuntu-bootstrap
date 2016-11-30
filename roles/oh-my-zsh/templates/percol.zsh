@@ -25,3 +25,20 @@ function percol-src () {
 }
 zle -N percol-src
 bindkey '^]' percol-src
+
+function percol-find-file() {
+    if git rev-parse 2> /dev/null; then
+        source_files=$(git ls-files)
+    else
+        source_files=$(find . -type f)
+    fi
+
+    selected_files=$(echo $source_files | percol --prompt "[find file]")
+
+    BUFFER="${BUFFER}$(\echo $selected_files | tr '\n' ' ')"
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+
+zle -N percol-find-file
+bindkey '^s' percol-find-file
