@@ -15,7 +15,7 @@
 
   vars_prompt:
     - name: "user_name"
-      prompt: "Please enter your name (ex. Haruomi Hoshono)"
+      prompt: "Please enter your name (ex. Haruomi Hosono)"
       private: no
 
     - name: "user_email"
