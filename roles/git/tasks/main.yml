@@ -18,3 +18,12 @@
 
 - name: set commit.verbose
   git_config: name=commit.verbose scope=global value=true
+
+- name: download gibo
+  get_url: url="https://raw.github.com/simonwhitaker/gibo/master/gibo" dest=~/bin/
+
+- name: make gibo executable
+  file: path=~/bin/gibo mode="0755"
+
+- name: upgreade gibo
+  command: gibo -u
