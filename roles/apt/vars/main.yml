@@ -17,6 +17,7 @@ apt_packages:
   - { name: p7zip }
   - { name: rbenv }
   - { name: silversearcher-ag }
+  - { name: tree }
   - { name: vim }
   - { name: wget }
   - { name: zip }
