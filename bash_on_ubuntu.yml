@@ -10,7 +10,6 @@
     - { role: tmux, tags: [ tmux ] }
     - { role: ghq, tags: [ ghq ] }
     - { role: git, tags: [ git ] }
-    - { role: peco, tags: [ peco ] }
     - { role: percol, tags: [ percol ] }
 
   vars_prompt:

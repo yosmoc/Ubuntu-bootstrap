@@ -7,12 +7,11 @@ apt_packages:
   - { name: gist }
   - { name: git }
   - { name: golang }
-  - { name: hub }
   - { name: imagemagick }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
-  - { name: node }
+  - { name: nodejs }
   - { name: pandoc }
   - { name: p7zip }
   - { name: rbenv }
@@ -20,5 +19,6 @@ apt_packages:
   - { name: tree }
   - { name: vim }
   - { name: wget }
+  - { name: xclip }
   - { name: zip }
   - { name: zsh }

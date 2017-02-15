@@ -1,6 +1,7 @@
 apt_packages:
   - { name: libevent-dev }
   - { name: ncurses-dev }
+  - { name: libncurses5-dev }
   - { name: build-essential }
   - { name: automake }
   - { name: pkg-config }

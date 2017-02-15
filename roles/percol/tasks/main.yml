@@ -3,3 +3,6 @@
 
 - name: copy setting to ~/.percol.d/
   template: src=rc.py dest=~/.percol.d/ mode=0644
+
+- name: copy percol setting to .oh-my-zsh/custom
+  template: src=percol.zsh dest=~/.oh-my-zsh/custom/ mode=0644

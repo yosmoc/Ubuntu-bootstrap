@@ -19,3 +19,6 @@
 - name: Copy to /usr/bin/
   command: cp {{ workdir_result.stdout }}/peco_linux_amd64/peco /usr/bin/
   become: yes
+
+- name: copy peco setting to .oh-my-zsh/custom
+  template: src=peco.zsh dest=~/.oh-my-zsh/custom/ mode=0644
