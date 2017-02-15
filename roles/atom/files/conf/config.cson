@@ -1,0 +1,20 @@
+"*":
+  "exception-reporting":
+    userId: "33582a95-1826-d00b-6d5e-eba01cd628c7"
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "wrap-guide"
+    ]
+  editor:
+    invisibles: {}
+    fontSize: 11
+    showInvisibles: true
+  autosave:
+    enabled: true
+  "save-session":
+    dataSaveFolder: "/Users/yoshi/.atom/packages/save-session/projects"
+  "autocomplete-plus": {}
+  "atom-beautify":
+    _analyticsUserId: "da69c234-3647-47a4-9d7a-4d56acb9dcf4"

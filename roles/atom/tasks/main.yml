@@ -1,0 +1,25 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: get latest atom version
+  shell: >
+    curl -sI https://github.com/atom/atom/releases/latest | awk -F'/' '/^Location:/{print $NF}'
+  register: atom_latest_version
+
+- name: download latest atom
+  get_url: url=https://github.com/atom/atom/releases/download/{{ atom_latest_version.stdout }}/atom-amd64.deb dest={{ workdir_result.stdout }}/atom-amd64.deb
+
+- name: install atom
+  command: dpkg --install {{ workdir_result.stdout }}/atom-amd64.deb
+  become: yes
+
+- name: install packages
+  command: apm install "{{ item }}"
+  with_items: "{{ packages }}"
+
+- name: copy configuration files
+  copy: src=conf/ dest={{ dot_atom }}

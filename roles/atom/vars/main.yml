@@ -1,0 +1,31 @@
+dot_atom: ~/.atom
+
+packages:
+  - atom-beautify
+  - atom-copy-on-select
+  - atom-html-preview
+  - atom-jshint
+  - atomic-emacs
+  - autocomplete-emojis
+  - autocomplete-go
+  - autocomplete-paths
+  - autocomplete-plus
+  - autocomplete-python
+  - autocomplete-ruby
+  - compare-files
+  - editorconfig
+  - file-icons
+  - gist-it
+  - git-history
+  - git-log
+  - git-plus
+  - gitignore-snippets
+  - go-plus
+  - linter-pylint
+  - minimap
+  - python-tools
+  - rubocop-auto-correct
+  - save-session
+  - script
+  - sublime-style-column-selection
+  - sort-lines
