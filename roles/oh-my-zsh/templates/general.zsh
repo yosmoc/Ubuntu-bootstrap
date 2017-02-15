@@ -4,3 +4,4 @@ alias t="tig"
 alias ta="tig --all"
 alias -g B='`git branch | percol | sed -e "s/^\*[ ]*//g"`'
 export PATH=$PATH:~/tools
+export EDITOR=vim
