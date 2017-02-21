@@ -1,0 +1,33 @@
+- name: install xremap build dependencies
+  apt: name="{{ item.name }}" state="{{ item.state|default("latest") }}"
+  with_items: "{{apt_packages}}"
+  become: yes
+
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: git clone latest xremap
+  git: repo=https://github.com/k0kubun/xremap.git dest={{ workdir_result.stdout }}/xremap
+
+- name: run make
+  make: chdir={{ workdir_result.stdout }}/xremap
+
+- name: make install
+  make: chdir={{ workdir_result.stdout }}/xremap target=install
+  become: yes
+
+- name: copy .xremap.conf
+  template: src=.xremap.conf.j2 dest=~/.xremap.conf mode=0644
+
+- name: create ~/.config/systemd/user/ directory
+  file: path=~/.config/systemd/user/ state=directory mode=0755
+
+- name: copy xremap.services to ~/.config/systemd/user/xremap.service
+  template: src=xremap.service.j2 dest=~/.config/systemd/user/xremap.service mode=0644
+
+- name: enable xremap service
+  command: systemctl --user enable xremap
