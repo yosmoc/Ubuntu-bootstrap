@@ -7,7 +7,6 @@ packages:
   - atom-jshint
   - atomic-emacs
   - autocomplete-emojis
-  - autocomplete-go
   - autocomplete-paths
   - autocomplete-plus
   - autocomplete-python
