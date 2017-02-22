@@ -1,4 +1,6 @@
-# Windows 10 bootstrap
+# Ubuntu-bootstrap
+
+My personal settings for Ubuntu linux.
 
 ## Requirement
 
