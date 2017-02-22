@@ -1,0 +1,6 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "ctrl+l",           "command": "workbench.action.showCommands" },
+    { "key": "ctrl+x k",         "command": "workbench.action.closeActiveEditor" },
+    { "key": "ctrl+x ctrl+c",    "command": "workbench.action.quit" },
+]

@@ -12,6 +12,7 @@
     - { role: ghq, tags: [ ghq ] }
     - { role: git, tags: [ git ] }
     - { role: peco, tags: [ peco ] }
+    - { role: vscode, tags: [ vscode ] }
     - { role: xremap, tags: [ xremap ] }
 
   vars_prompt:

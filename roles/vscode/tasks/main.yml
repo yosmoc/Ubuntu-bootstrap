@@ -1,0 +1,23 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: download visual-studio-code
+  get_url: url=https://vscode-update.azurewebsites.net/1.9.1/linux-deb-x64/stable dest={{ workdir_result.stdout }}/vscode.deb
+
+- name: dpkg vscode.deb
+  apt: deb={{ workdir_result.stdout }}/vscode.deb
+  become: yes
+  
+- name: install packages
+  command: code --install-extension "{{ item }}"
+  with_items: "{{packages}}"
+
+- name: copy keybind file
+  copy: src=keybindings.json dest="{{ dot_vscode }}"
+
+- name: copy setting file
+  copy: src=settings.json dest="{{ dot_vscode }}"
