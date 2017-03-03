@@ -6,7 +6,7 @@
   register: workdir_result
 
 - name: download visual-studio-code
-  get_url: url=https://vscode-update.azurewebsites.net/1.9.1/linux-deb-x64/stable dest={{ workdir_result.stdout }}/vscode.deb
+  get_url: url=https://vscode-update.azurewebsites.net/1.10.1/linux-deb-x64/stable dest={{ workdir_result.stdout }}/vscode.deb
 
 - name: dpkg vscode.deb
   apt: deb={{ workdir_result.stdout }}/vscode.deb
