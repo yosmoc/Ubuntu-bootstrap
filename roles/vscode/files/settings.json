@@ -3,4 +3,5 @@
     "workbench.welcome.enabled": false,
     "files.autoSave": "onFocusChange",
     "editor.renderIndentGuides": true,
+    "git.autofetch": false
 }
