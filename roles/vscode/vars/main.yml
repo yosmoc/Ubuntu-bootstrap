@@ -5,3 +5,5 @@ packages:
   - lukehoban.Go
   - hiro-sun.vscode-emacs
   - PeterJausovec.vscode-docker
+  - christian-kohler.path-intellisense
+  - dbaeumer.vscode-eslint
