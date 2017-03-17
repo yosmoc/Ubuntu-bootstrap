@@ -8,6 +8,7 @@ apt_packages:
   - { name: git }
   - { name: golang }
   - { name: imagemagick }
+  - { name: ibus-mozc }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
