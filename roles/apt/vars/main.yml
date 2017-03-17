@@ -22,5 +22,6 @@ apt_packages:
   - { name: vim }
   - { name: wget }
   - { name: xclip }
+  - { name: zeal }
   - { name: zip }
   - { name: zsh }
