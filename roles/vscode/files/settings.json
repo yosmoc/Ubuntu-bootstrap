@@ -4,5 +4,7 @@
     "files.autoSave": "onFocusChange",
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": true,
-    "git.autofetch": false
+    "git.autofetch": false,
+    "python.pythonPath": "/usr/bin/python3",
+    "workbench.iconTheme": "vs-seti"
 }
