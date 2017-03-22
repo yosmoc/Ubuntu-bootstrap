@@ -3,7 +3,7 @@ set vertical-split = no
 set split-view-height = 75%
 set wrap-lines = yes
 bind status  C !git commit -v
-bind main    R !git rebase --autosquash -i %(commit)
-bind diff    R !git rebase --autosquash -i %(commit)
+bind main    R !git rebase --autosquash --autostash -i %(commit)
+bind diff    R !git rebase --autosquash --autostash -i %(commit)
 bind main    F !git commit --fixup %(commit)
 bind diff    F !git commit --fixup %(commit)
