@@ -7,3 +7,4 @@ packages:
   - PeterJausovec.vscode-docker
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
+  - ms-vscode.cpptools
