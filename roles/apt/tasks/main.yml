@@ -2,6 +2,10 @@
   apt_repository: repo='ppa:ubuntu-lxc/lxd-stable'
   become: yes
 
+- name: add apt repository for zeal
+  apt_repository: repo='ppa:zeal-developers/ppa'
+  become: yes
+
 - name: apt-get update
   apt: update_cache=yes
   become: yes
