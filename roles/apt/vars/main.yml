@@ -16,6 +16,9 @@ apt_packages:
   - { name: pandoc }
   - { name: p7zip }
   - { name: python3 }
+  - { name: python3-pip}
+  - { name: python }
+  - { name: python-pip }
   - { name: rbenv }
   - { name: silversearcher-ag }
   - { name: tree }
