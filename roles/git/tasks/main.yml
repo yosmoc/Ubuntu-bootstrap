@@ -25,5 +25,5 @@
 - name: make gibo executable
   file: path=~/bin/gibo mode="0755"
 
-- name: upgreade gibo
+- name: upgrade gibo
   command: gibo -u
