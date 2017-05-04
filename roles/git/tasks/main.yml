@@ -19,6 +19,9 @@
 - name: set commit.verbose
   git_config: name=commit.verbose scope=global value=true
 
+- name: set rebase.autostash
+  git_config: name=rebase.autostash scope=global value=true
+
 - name: download gibo
   get_url: url="https://raw.github.com/simonwhitaker/gibo/master/gibo" dest=~/bin/
 
