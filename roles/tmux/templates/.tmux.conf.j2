@@ -19,7 +19,7 @@ bind -n S-right select-pane -R
 bind 1 break-pane
 bind 2 split-window -v
 bind 3 split-window -h
-bind -t vi-copy y copy-pipe "xclip -sel clip -i"
+bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel "xclip -sel clip -i"
 
 # mouse
 set -g mouse on
