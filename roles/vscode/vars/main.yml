@@ -8,3 +8,4 @@ packages:
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
   - ms-vscode.cpptools
+  - waderyan.gitblame
