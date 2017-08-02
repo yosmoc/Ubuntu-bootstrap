@@ -3,6 +3,7 @@
   gather_facts: no
   become: no
   roles:
+    - { role: gnome, tags: [ gnome ] }
     - { role: apt, tags: [ apt ] }
     - { role: color, tags: [ color ] }
     - { role: oh-my-zsh, tags: [ oh-my-zsh ] }
