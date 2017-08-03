@@ -7,11 +7,13 @@ apt_packages:
   - { name: gist }
   - { name: git }
   - { name: golang }
+  - { name: gnome-shell-pomodoro }
   - { name: imagemagick }
   - { name: ibus-mozc }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
+  - { name: mplayer } 
   - { name: nodejs }
   - { name: pandoc }
   - { name: p7zip }
