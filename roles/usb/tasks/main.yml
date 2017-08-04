@@ -1,0 +1,3 @@
+- name: copy usb setting file to /etc/udev/
+  template: src=50-myusb.rules dest=/etc/udev/ mode=0644
+  become: yes

@@ -13,6 +13,7 @@
     - { role: git, tags: [ git ] }
     - { role: peco, tags: [ peco ] }
     - { role: vscode, tags: [ vscode ] }
+    - { role: usb, tags: [ usb ] }  
     - { role: xremap, tags: [ xremap ] }
 
   vars_prompt:
