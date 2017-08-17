@@ -23,3 +23,14 @@ window class_not: ['gnome-terminal-server', 'code'] do
   remap 'C-u', to: ['Shift-Home', 'Ctrl-x']
   remap 'C-w', to: ['Ctrl-Shift-Left', 'Ctrl-x']
 end
+
+define :activate do |wm_class, command|
+  execute("wmctrl -x -a #{wm_class.shellescape} || #{command.shellescape}")
+end
+
+# Window switcher
+# Check WM_CLASS by wmctrl -x -l
+remap 'C-1', to: activate('google-chrome.Google-chrome', '/usr/bin/google-chrome')
+remap 'C-2', to: activate('code.Code', '/usr/bin/code')
+remap 'C-3', to: activate('gnome-terminal-server.Gnome-Terminal', '/usr/bin/gnome-terminal')
+remap 'C-4', to: activate('nautilus.Nautilus', '/usr/bin/nautilus')
