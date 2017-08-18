@@ -1,2 +1,5 @@
 - name: copy gtk setting to ~/.config/gtk-3.0/
   template: src=gtk.css dest=~/.config/gtk-3.0/ mode=0644
+
+- name: enable nautilus address bar shows always text
+  command: gsettings set org.gnome.nautilus.preferences always-use-location-entry true
