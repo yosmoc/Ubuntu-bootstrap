@@ -9,3 +9,4 @@ packages:
   - dbaeumer.vscode-eslint
   - ms-vscode.cpptools
   - waderyan.gitblame
+  - ericmccarthy.vs-code-mark-point
