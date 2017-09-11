@@ -8,6 +8,7 @@ apt_packages:
   - { name: git }
   - { name: golang }
   - { name: gnome-shell-pomodoro }
+  - { name: hexedit } 
   - { name: imagemagick }
   - { name: ibus-mozc }
   - { name: libtool }
