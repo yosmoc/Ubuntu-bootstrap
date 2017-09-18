@@ -7,5 +7,7 @@
     "git.autofetch": false,
     "python.pythonPath": "/usr/bin/python3",
     "workbench.iconTheme": "vs-seti",
-    "workbench.editor.enablePreview": false   
+    "workbench.editor.enablePreview": false,
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true
 }
