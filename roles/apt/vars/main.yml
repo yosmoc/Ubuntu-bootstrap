@@ -8,13 +8,13 @@ apt_packages:
   - { name: git }
   - { name: golang }
   - { name: gnome-shell-pomodoro }
-  - { name: hexedit } 
+  - { name: hexedit }
   - { name: imagemagick }
   - { name: ibus-mozc }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
-  - { name: mplayer } 
+  - { name: mplayer }
   - { name: nodejs }
   - { name: pandoc }
   - { name: p7zip }
@@ -26,6 +26,7 @@ apt_packages:
   - { name: silversearcher-ag }
   - { name: tree }
   - { name: vim }
+  - { name: vbindiff }
   - { name: wget }
   - { name: xclip }
   - { name: zeal }
