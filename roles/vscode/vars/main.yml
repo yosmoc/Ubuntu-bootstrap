@@ -1,7 +1,7 @@
 dot_vscode: ~/.config/Code/User
 
 packages:
-  - donjayamanne.python
+  - ms-python.python
   - lukehoban.Go
   - hiro-sun.vscode-emacs
   - PeterJausovec.vscode-docker
