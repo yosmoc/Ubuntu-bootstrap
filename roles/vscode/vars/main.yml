@@ -4,10 +4,12 @@ packages:
   - ms-python.python
   - lukehoban.Go
   - hiro-sun.vscode-emacs
-  - PeterJausovec.vscode-docker
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
   - ms-vscode.cpptools
   - waderyan.gitblame
   - ericmccarthy.vs-code-mark-point
   - deerawan.vscode-dash
+  - eg2.tslint
+  - msjsdiag.debugger-for-chrome
+
