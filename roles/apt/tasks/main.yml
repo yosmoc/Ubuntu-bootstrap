@@ -1,5 +1,5 @@
 - name: add apt repository for golang
-  apt_repository: repo='ppa:ubuntu-lxc/lxd-stable'
+  apt_repository: repo='ppa:gophers/archive'
   become: yes
 
 - name: add apt repository for zeal

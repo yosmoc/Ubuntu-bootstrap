@@ -7,7 +7,7 @@ apt_packages:
   - { name: gdb-arm-none-eabi }
   - { name: gist }
   - { name: git }
-  - { name: golang }
+  - { name: golang-go }
   - { name: gnome-shell-pomodoro }
   - { name: hexedit }
   - { name: imagemagick }
