@@ -1,116 +1,92 @@
 [
     {
-        "key": "ctrl+x 1",
-        "command": "workbench.action.closeOtherEditors"
-    },
-    {
-        "key": "ctrl+x 0",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+x ctrl+s",
-        "command": "workbench.action.files.save"
-    },
-    {
-        "key": "ctrl+x s",
-        "command": "workbench.action.files.saveAll"
-    },
-    {
-        "key": "ctrl+x s",
-        "command": "workbench.action.files.saveAs"
-    },
-    {
-        "key": "ctrl+x k",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.files.openFile"
-    },
-    {
         "key": "ctrl+x 3",
         "command": "workbench.action.splitEditor"
     },
     {
-        "key": "ctrl+x o",
-        "command": "workbench.action.cycleEditor"
+        "key": "ctrl+left",
+        "command": "workbench.action.navigateBack"
     },
     {
-        "key": "ctrl+x b",
-        "command": "workbench.action.quickOpen"
+        "key": "ctrl+right",
+        "command": "workbench.action.navigateForward"
     },
     {
-        "key": "alt+x",
-        "command": "workbench.action.showCommands"
+        "key": "ctrl+shift+[IntlRo]",
+        "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "alt+left",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.navigateBack"
     },
     {
         "key": "ctrl+l",
         "command": "workbench.action.showCommands"
     },
     {
-        "key": "ctrl+e",
-        "command": "cursorEnd",
-        "when": "editorTextFocus"
+        "key": "alt+x",
+        "command": "workbench.action.showCommands"
     },
     {
-        "key": "alt+f",
-        "command": "cursorWordRight",
-        "when": "editorTextFocus"
+        "key": "ctrl+x b",
+        "command": "workbench.action.quickOpen"
     },
     {
-        "key": "alt+b",
-        "command": "cursorWordLeft",
-        "when": "editorTextFocus"
+        "key": "ctrl+x o",
+        "command": "workbench.action.cycleEditor"
     },
     {
-        "key": "alt+shift+,",
-        "command": "cursorTop",
-        "when": "editorTextFocus"
+        "key": "alt+left",
+        "command": "-workbench.action.navigateBack"
     },
     {
-        "key": "alt+shift+.",
-        "command": "cursorBottom",
-        "when": "editorTextFocus"
+        "key": "ctrl+x 1",
+        "command": "workbench.action.closeOtherEditors"
     },
     {
-        "key": "ctrl+v",
-        "command": "cursorPageDown",
-        "when": "editorTextFocus"
+        "key": "ctrl+x k",
+        "command": "workbench.action.closeActiveEditor"
     },
     {
-        "key": "alt+v",
-        "command": "cursorPageUp",
-        "when": "editorTextFocus"
+        "key": "ctrl+x 0",
+        "command": "workbench.action.closeActiveEditor"
     },
     {
-        "key": "ctrl+space",
-        "command": "extension.setMark",
-        "when": "editorTextFocus"
+        "key": "ctrl+x s",
+        "command": "workbench.action.files.saveAs"
     },
     {
-        "key": "ctrl+shift+2",
-        "command": "extension.setMark",
-        "when": "editorTextFocus"
+        "key": "ctrl+x ctrl+w",
+        "command": "workbench.action.files.saveAs"
     },
     {
-        "key": "ctrl+g",
-        "command": "closePeekDeclarationEditor",
-        "when": "editorFocus && inInnerEditor"
+        "key": "ctrl+x s",
+        "command": "workbench.action.files.saveAll"
     },
     {
-        "key": "ctrl+g",
-        "command": "closeReferenceSearchEditor",
-        "when": "editorFocus && inInnerEditor"
+        "key": "ctrl+x ctrl+s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+shift+[IntlRo]",
+        "command": "-workbench.action.navigateForward"
     },
     {
         "key": "ctrl+g",
         "command": "cancelSelection",
         "when": "editorTextFocus && editorHasSelection"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "removeSecondaryCursors",
-        "when": "editorTextFocus && editorHasMultipleSelections"
     },
     {
         "key": "ctrl+g",
@@ -168,53 +144,58 @@
         "when": "globalMessageVisible"
     },
     {
-        "key": "ctrl+z",
-        "command": "undo",
+        "key": "ctrl+g",
+        "command": "closeReferenceSearchEditor",
+        "when": "editorFocus && inInnerEditor"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "closePeekDeclarationEditor",
+        "when": "editorFocus && inInnerEditor"
+    },
+    {
+        "key": "ctrl+shift+2",
+        "command": "extension.setMark",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+/",
-        "command": "undo",
+        "key": "ctrl+space",
+        "command": "extension.setMark",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+_",
-        "command": "undo",
+        "key": "alt+v",
+        "command": "cursorPageUp",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+alt+/",
-        "command": "redo",
+        "key": "ctrl+v",
+        "command": "cursorPageDown",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+z",
-        "command": "redo",
+        "key": "alt+shift+.",
+        "command": "cursorBottom",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+x u",
-        "command": "undo",
+        "key": "alt+shift+,",
+        "command": "cursorTop",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+alt+_",
-        "command": "redo",
+        "key": "alt+b",
+        "command": "cursorWordLeft",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+f",
-        "command": "cursorRight",
+        "key": "alt+f",
+        "command": "cursorWordRight",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+b",
-        "command": "cursorLeft",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "cursorDown",
+        "key": "ctrl+e",
+        "command": "cursorEnd",
         "when": "editorTextFocus"
     },
     {
@@ -253,9 +234,9 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+w",
-        "command": "editor.action.clipboardCopyAction",
-        "when": "editorTextFocus"
+        "key": "ctrl+g",
+        "command": "removeSecondaryCursors",
+        "when": "editorTextFocus && editorHasMultipleSelections"
     },
     {
         "key": "ctrl+w",
@@ -268,13 +249,13 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+p",
-        "command": "cursorUp",
+        "key": "ctrl+a",
+        "command": "cursorHome",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+a",
-        "command": "cursorHome",
+        "key": "ctrl+p",
+        "command": "cursorUp",
         "when": "editorTextFocus"
     },
     {
@@ -385,6 +366,26 @@
     {
         "key": "ctrl+alt+_",
         "command": "redo",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "editor.action.clipboardCopyAction",
         "when": "editorTextFocus"
     }
 ]
