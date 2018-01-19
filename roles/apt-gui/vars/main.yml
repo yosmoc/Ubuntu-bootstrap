@@ -1,0 +1,6 @@
+apt_packages:
+  - { name: albert }
+  - { name: gnome-shell-pomodoro }
+  - { name: ibus-mozc }
+  - { name: mplayer }
+  - { name: zeal }

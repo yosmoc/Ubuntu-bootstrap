@@ -1,0 +1,20 @@
+- name: add apt repository for zeal
+  apt_repository: repo='ppa:zeal-developers/ppa'
+  become: yes
+
+- name: add apt repository for albert
+  apt_repository: repo='ppa:nilarimogard/webupd8'
+  become: yes
+
+- name: apt-get update
+  apt: update_cache=yes
+  become: yes
+
+- name: apt-get upgrade
+  apt: upgrade=dist
+  become: yes
+
+- name: install packages
+  apt: name="{{ item.name }}" state="{{ item.state|default("latest") }}"
+  with_items: "{{apt_packages}}"
+  become: yes

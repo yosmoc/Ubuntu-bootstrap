@@ -3,7 +3,7 @@
   gather_facts: no
   become: no
   roles:
-    - { role: apt, tags: [ apt ] }
+    - { role: apt-cli, tags: [ apt-cli ] }
     - { role: color, tags: [ color ] }
     - { role: oh-my-zsh, tags: [ oh-my-zsh ] }
     - { role: tig, tags: [ tig ] }

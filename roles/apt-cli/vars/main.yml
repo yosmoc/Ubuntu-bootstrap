@@ -1,5 +1,4 @@
 apt_packages:
-  - { name: albert }
   - { name: cmigemo }
   - { name: colordiff }
   - { name: emacs }
@@ -7,14 +6,11 @@ apt_packages:
   - { name: gist }
   - { name: git }
   - { name: golang-go }
-  - { name: gnome-shell-pomodoro }
   - { name: hexedit }
   - { name: imagemagick }
-  - { name: ibus-mozc }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
-  - { name: mplayer }
   - { name: nodejs }
   - { name: pandoc }
   - { name: p7zip }
@@ -29,6 +25,5 @@ apt_packages:
   - { name: vbindiff }
   - { name: wget }
   - { name: xclip }
-  - { name: zeal }
   - { name: zip }
   - { name: zsh }
