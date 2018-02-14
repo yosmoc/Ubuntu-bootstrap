@@ -12,4 +12,5 @@ packages:
   - deerawan.vscode-dash
   - eg2.tslint
   - msjsdiag.debugger-for-chrome
+  - esbenp.prettier-vscode
 
