@@ -9,5 +9,17 @@
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.renderWhitespace": "all",
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    }
 }
