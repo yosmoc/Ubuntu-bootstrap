@@ -18,6 +18,7 @@
   user:
     name: "{{ ansible_user }}"
     groups: uinput
+    append: yes
   become: yes
 
 - name: add udev rule
