@@ -14,15 +14,19 @@
     name: uinput
   become: yes
 
-- name: add current user in uinput group
+- name: add current user in uinput and input group
   user:
     name: "{{ ansible_user }}"
-    groups: uinput
+    groups: uinput,input
     append: yes
   become: yes
 
-- name: add udev rule
+- name: add uinput rule in udev
   template: src=uinput.rules dest=/etc/udev/rules.d/
+  become: yes
+
+- name: add input rule in udev
+  template: src=input.rules dest=/etc/udev/rules.d/
   become: yes
 
 - name: reload udev rules
