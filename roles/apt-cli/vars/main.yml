@@ -1,5 +1,6 @@
 apt_packages:
   - { name: cmigemo }
+  - { name: cifs-utils }
   - { name: colordiff }
   - { name: emacs }
   - { name: gdb-arm-none-eabi }
