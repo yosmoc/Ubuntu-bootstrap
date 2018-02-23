@@ -11,6 +11,8 @@
     - { role: ghq, tags: [ ghq ] }
     - { role: git, tags: [ git ] }
     - { role: percol, tags: [ percol ] }
+    - { role: nodejs, tags: [ nodejs ] }
+
 
   vars_prompt:
     - name: "user_name"
