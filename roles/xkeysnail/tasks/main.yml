@@ -1,0 +1,41 @@
+- name: Installing xkeysnail
+  pip:
+    name: xkeysnail
+    executable: pip3
+
+- name: create ~/.xkeysnail/ directory
+  file: path=~/.xkeysnail/ state=directory mode=0755
+
+- name: copy xkeysnail setting
+  template: src=config.py dest=~/.xkeysnail mode=0644
+
+- name: add uinput group
+  group:
+    name: uinput
+  become: yes
+
+- name: add current user in uinput group
+  user:
+    name: "{{ ansible_user }}"
+    groups: uinput
+  become: yes
+
+- name: add udev rule
+  template: src=uinput.rules dest=/etc/udev/rules.d/
+  become: yes
+
+- name: reload udev rules
+  command: udevadm control --reload-rules && udevadm trigger
+  become: yes
+
+- name: create ~/.config/systemd/user/ directory
+  file: path=~/.config/systemd/user/ state=directory mode=0755
+
+- name: copy xkeysnail.services to ~/.config/systemd/user/xkeysnail.service
+  template: src=xkeysnail.service.j2 dest=~/.config/systemd/user/xkeysnail.service mode=0644
+
+- name: enable xkeysnail service
+  command: systemctl --user enable xkeysnail
+
+- name: start xkeysnail service
+  command: systemctl --user start xkeysnail
