@@ -16,7 +16,6 @@
     - { role: vscode, tags: [ vscode ] }
     - { role: usb, tags: [ usb ] }
     - { role: xkeysnail, tags: [ xkeysnail ] }
-    - { role: nodejs, tags: [ nodejs ] }
 
   vars_prompt:
     - name: "user_name"
