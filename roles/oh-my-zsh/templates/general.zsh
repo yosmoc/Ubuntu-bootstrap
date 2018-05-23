@@ -6,3 +6,5 @@ export PATH=$PATH:~/tools
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.yarn/bin
 export EDITOR=vim
+setopt correct
+function chpwd() { ls }
