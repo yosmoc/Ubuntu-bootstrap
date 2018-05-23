@@ -2,7 +2,7 @@ dot_vscode: ~/.config/Code/User
 
 packages:
   - ms-python.python
-  - lukehoban.Go
+  - ms-vscode.go
   - hiro-sun.vscode-emacs
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
