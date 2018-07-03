@@ -32,4 +32,4 @@
   file: path=~/bin/gibo mode="0755"
 
 - name: upgrade gibo
-  command: gibo -u
+  command: gibo update
