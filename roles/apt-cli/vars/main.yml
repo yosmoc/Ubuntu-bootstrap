@@ -3,7 +3,7 @@ apt_packages:
   - { name: cifs-utils }
   - { name: colordiff }
   - { name: emacs }
-  - { name: gdb-arm-none-eabi }
+  - { name: gdb-multiarch }
   - { name: gist }
   - { name: git }
   - { name: golang-go }
