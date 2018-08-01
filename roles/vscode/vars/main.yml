@@ -13,3 +13,4 @@ packages:
   - eg2.tslint
   - msjsdiag.debugger-for-chrome
   - esbenp.prettier-vscode
+  - coenraads.bracket-pair-colorizer
