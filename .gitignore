@@ -1,0 +1,18 @@
+### https://raw.github.com/github/gitignore/90cb995068518f26e3c1305401ffa9e4ae8b110b/Global/Linux.gitignore
+
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# ansible retly file
+*.retry
