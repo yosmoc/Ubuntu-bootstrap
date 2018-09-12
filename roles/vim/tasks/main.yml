@@ -1,0 +1,2 @@
+- name: copy .tmux.conf
+  template: src=.vimrc.j2 dest=~/.vimrc mode=0644
