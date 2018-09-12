@@ -14,3 +14,5 @@ packages:
   - msjsdiag.debugger-for-chrome
   - esbenp.prettier-vscode
   - coenraads.bracket-pair-colorizer
+  - streetsidesoftware.code-spell-checker
+  - streetsidesoftware.code-spell-checker-swedish
