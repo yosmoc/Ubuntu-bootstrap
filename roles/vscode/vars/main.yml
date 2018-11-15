@@ -10,7 +10,7 @@ packages:
   - waderyan.gitblame
   - ericmccarthy.vs-code-mark-point
   - deerawan.vscode-dash
-  - eg2.tslint
+  - ms-vscode.vscode-typescript-tslint-plugin
   - msjsdiag.debugger-for-chrome
   - esbenp.prettier-vscode
   - coenraads.bracket-pair-colorizer
