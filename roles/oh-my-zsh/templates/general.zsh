@@ -8,3 +8,7 @@ export PATH=$PATH:~/.yarn/bin
 export EDITOR=vim
 setopt correct
 function chpwd() { ls }
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
