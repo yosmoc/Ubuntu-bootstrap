@@ -1,5 +1,5 @@
-- name: add apt repository for golang
-  apt_repository: repo='ppa:gophers/archive'
+- name: add apt repository for zeal
+  apt_repository: repo='ppa:zeal-developers/ppa'
   become: yes
 
 - name: apt-get update
