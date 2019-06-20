@@ -17,3 +17,4 @@ packages:
   - streetsidesoftware.code-spell-checker
   - streetsidesoftware.code-spell-checker-swedish
   - humao.rest-client
+  - mrmlnc.vscode-duplicate
