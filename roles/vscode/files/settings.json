@@ -6,6 +6,7 @@
     "editor.minimap.enabled": true,
     "git.autofetch": false,
     "python.pythonPath": "/usr/bin/python3",
+    "python.autoComplete.addBrackets": true,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.renderWhitespace": "all",
