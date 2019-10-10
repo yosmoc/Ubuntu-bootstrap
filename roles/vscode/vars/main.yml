@@ -18,3 +18,6 @@ packages:
   - streetsidesoftware.code-spell-checker-swedish
   - humao.rest-client
   - mrmlnc.vscode-duplicate
+  - shardulm94.trailing-spaces
+  - tushortz.python-extended-snippets
+  - njpwerner.autodocstring
