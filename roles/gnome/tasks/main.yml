@@ -6,3 +6,6 @@
 
 - name: disable animations
   command: gsettings set org.gnome.desktop.interface enable-animations false
+
+- name: show date in panel
+  command: gsettings set org.gnome.desktop.interface clock-show-date true
