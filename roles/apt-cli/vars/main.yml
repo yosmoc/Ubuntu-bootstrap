@@ -9,6 +9,7 @@ apt_packages:
   - { name: golang-go }
   - { name: hexedit }
   - { name: imagemagick }
+  - { name: jq }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
