@@ -9,3 +9,6 @@
 
 - name: show date in panel
   command: gsettings set org.gnome.desktop.interface clock-show-date true
+
+- name: disable screen rotate
+  command: gsettings set org.gnome.settings-daemon.plugins.orientation active false
