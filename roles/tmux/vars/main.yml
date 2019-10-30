@@ -5,3 +5,8 @@ apt_packages:
   - { name: build-essential }
   - { name: automake }
   - { name: pkg-config }
+
+scripts:
+  - { name: 12 }
+  - { name: 13 }
+  - { name: 22 }

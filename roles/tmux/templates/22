@@ -1,0 +1,7 @@
+#!/bin/bash
+tmux splitw -h -p 50 # split it into two halves
+tmux splitw -v -t 0 -p 50 # split it into two halves
+tmux splitw -v -t 1 -p 50 # split it into two halves
+if [ $# -eq 1 ]; then
+    tmux rename-window $1
+fi
