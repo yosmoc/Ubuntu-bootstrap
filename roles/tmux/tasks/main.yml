@@ -31,7 +31,7 @@
   become: yes
 
 - name: copy .tmux.conf
-  template: src=.tmux.conf.j2 dest=~/.tmux.conf mode=0644
+  template: src=.tmux.conf dest=~/.tmux.conf mode=0644
 
 - name: copy scripts
   template: src="{{item.name}}" dest=~/tools/ mode=0755
