@@ -16,6 +16,11 @@
 - name: Extract tig
   unarchive: src={{ workdir_result.stdout }}/tig-{{ tig_latest_version.stdout }}.tar.gz dest={{ workdir_result.stdout }} copy=no
 
+- name: configure
+  command: ./autogen.sh && ./configure --with-shared
+  args:
+    chdir: "{{ workdir_result.stdout }}/tig-{{ tig_latest_version.stdout }}"
+
 - name: make
   make:
     chdir: "{{ workdir_result.stdout }}/tig-{{ tig_latest_version.stdout }}"
