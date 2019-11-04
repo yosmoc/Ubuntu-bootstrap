@@ -18,7 +18,7 @@
         "body": [
             "interface $1 {",
             "  property: string",
-            "};"
+            "}"
         ]
     },
     "type": {
@@ -34,6 +34,11 @@
         "body": [
             "readonly $1"
         ],
+    },
+    "destrucuring const": {
+        "prefix": "c{",
+        "body": "const {${2:property}} = ${1:variable}",
+        "description": "object destructuring const"
     },
     // debug
     "console.log": {
@@ -703,8 +708,8 @@
         "body": [
             "import React from 'react';",
             "",
-            "const ${1:Name}: React.FC = () => {",
-            "  $2",
+            "const ${1:Name}: React.FC<> = ($2) => {",
+            "  $3",
             "  return (",
             "    <div/>",
             "  );",
@@ -1351,17 +1356,15 @@
     //     ],
     //     "description": "Styled Components import"
     // },
-    // "Styled Components": {
-    //     "prefix": "sc",
-    //     "body": [
-    //         "const Styled${1:MuiComponent} = styled(${1:MuiComponent})`",
-    //     "  && {",
-    //     "    ${1:style}",
-    //     "  }",
-    //         "`",
-    //     ],
-    //     "description": "Styled Components"
-    // },
+    "Styled Components": {
+        "prefix": "st",
+        "body": [
+            "const ${1:Component}Wrapper = styled.$2`",
+            "    ${3:style}",
+            "`",
+        ],
+        "description": "styled for Styled Components"
+    },
     // // レイアウト
     // "flexbox": {
     //     "prefix": "fl",
