@@ -11,14 +11,9 @@
     "workbench.editor.enablePreview": false,
     "editor.renderWhitespace": "all",
     "files.trimTrailingWhitespace": true,
-    "editor.tabCompletion": "on",
     "editor.snippetSuggestions": "top",
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    },
-    "editor.quickSuggestionsDelay": 50,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.quickSuggestionsDelay": 0,
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
