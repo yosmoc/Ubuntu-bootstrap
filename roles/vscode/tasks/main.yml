@@ -20,7 +20,7 @@
   apt: deb={{ workdir_result.stdout }}/vscode.deb
   become: yes
   when: code_exist is failed
-  
+
 - name: install packages
   command: code --install-extension "{{ item }}"
   with_items: "{{ packages }}"
@@ -30,3 +30,8 @@
 
 - name: copy setting file
   copy: src=settings.json dest="{{ dot_vscode }}"
+
+- name: copy snippet files
+  copy: src={{item.src}} dest="{{ dot_vscode }}/snippets"
+  with_filetree: files/snippets/
+  when: item.state == 'file'

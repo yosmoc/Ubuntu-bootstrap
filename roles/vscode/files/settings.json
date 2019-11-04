@@ -11,6 +11,32 @@
     "workbench.editor.enablePreview": false,
     "editor.renderWhitespace": "all",
     "files.trimTrailingWhitespace": true,
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.quickSuggestionsDelay": 50,
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/bower_components": true
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+    },
+    "emmet.syntaxProfiles": {
+        "jsx": {
+            "self_closing_tag": true
+        },
+        "tsx": {
+            "self_closing_tag": true
+        }
+    },
+    "emmet.triggerExpansionOnTab": true,
     "[javascript]": {
         "editor.formatOnSave": true
     },
@@ -22,5 +48,5 @@
     },
     "[typescriptreact]": {
         "editor.formatOnSave": true
-    }
+    },
 }

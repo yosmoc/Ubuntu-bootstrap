@@ -1,0 +1,1657 @@
+{
+    "const": {
+        "prefix": "c",
+        "body": [
+            "const $1"
+        ],
+        "description": "const"
+    },
+    "let": {
+        "prefix": "l",
+        "body": [
+            "let $1"
+        ],
+        "description": "variable"
+    },
+    "interface": {
+        "prefix": "inter",
+        "body": [
+            "interface $1 {",
+            "  property: string",
+            "};"
+        ]
+    },
+    "type": {
+        "prefix": "type",
+        "body":[
+            "type $1 = {",
+            "  property: string",
+            "}"
+        ],
+    },
+    "readonly": {
+        "prefix": "read",
+        "body": [
+            "readonly $1"
+        ],
+    },
+    // debug
+    "console.log": {
+        "prefix": "cl",
+        "body": [
+            "console.log(${1:val})"
+        ],
+        "description": "console.log"
+    },
+    "console.dir": {
+        "prefix": "cd",
+        "body": [
+            "console.dir(${1:obj})"
+        ],
+        "description": "console.dir"
+    },
+    "console.log show all": {
+        "prefix": "clj",
+        "body": [
+            "console.log(JSON.stringify(${1:obj}))"
+        ],
+        "description": "console.log show all"
+    },
+    "alert": {
+        "prefix": "al",
+        "body": [
+            "alert(${1:message})"
+        ],
+        "description": "alert"
+    },
+    "debugger": {
+        "prefix": "deb",
+        "body": [
+            "debugger"
+        ],
+        "description": "debugger"
+    },
+    // loop
+    "for": {
+        "prefix": "fr",
+        "body": [
+            "for (let ${1:i} = 0; ${1:i} < ${2:count}; ++${1:i}) {",
+            "  ${3}",
+            "}"
+        ],
+        "description": "for in"
+    },
+    "for in": {
+        "prefix": "fi",
+        "body": [
+            "for (let key in ${1:obj}s) {",
+            "  const ${1:obj} = ${1:obj}s[key]",
+            "}"
+        ],
+        "description": "for in"
+    },
+    "for of": {
+        "prefix": "fo",
+        "body": [
+            "for (let val of ${1:arr}) {",
+            "  ",
+            "}"
+        ],
+        "description": "for of"
+    },
+    "forEach": {
+        "prefix": "fe",
+        "body": [
+            "Object.keys(${1:obj}).forEach(key => {",
+            "  ",
+            "})"
+        ],
+        "description": "forEach"
+    },
+    "Object keys": {
+        "prefix": "ok",
+        "body": [
+            "Object.keys(${1:obj})"
+        ],
+        "description": "Object keys"
+    },
+    "Object values": {
+        "prefix": "ov",
+        "body": [
+            "Object.values(${1:obj})"
+        ],
+        "description": "Object values"
+    },
+    "Array from": {
+        "prefix": "af",
+        "body": [
+            "Array.from(${1:arr})"
+        ],
+        "description": "array deepcopy"
+    },
+    "Object create": {
+        "prefix": "oc",
+        "body": [
+            "Object.create(${1:obj})"
+        ],
+        "description": "object deepcopy"
+    },
+    "delete": {
+        "prefix": "del",
+        "body": [
+            "delete ",
+        ],
+        "description": "delete"
+    },
+    "continue": {
+        "prefix": "co",
+        "body": [
+            "continue",
+        ],
+        "description": "continue"
+    },
+    "break": {
+        "prefix": "br",
+        "body": [
+            "break",
+        ],
+        "description": "break"
+    },
+    "switch": {
+        "prefix": "sw",
+        "body": [
+            "switch (${1:val}) {",
+            "  case ${2:match}:",
+            "    break",
+            "  default:",
+            "}"
+        ],
+        "description": "switch"
+    },
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if (${1}) {",
+            "  ",
+            "}",
+        ],
+        "description": "while"
+    },
+    "while": {
+        "prefix": "w",
+        "body": [
+            "while (${1}) {",
+            "  ",
+            "}",
+        ],
+        "description": "while"
+    },
+    "do while": {
+        "prefix": "dw",
+        "body": [
+            "do {",
+            "  ",
+            "} while (${1})",
+        ],
+        "description": "do while"
+    },
+    "try catch": {
+        "prefix": "tr",
+        "body": [
+            "try {",
+            "  ",
+            "} catch (e) {",
+            "  ",
+            "}",
+        ],
+        "description": "try catch"
+    },
+    // Array
+    "map": {
+        "prefix": "ma",
+        "body": [
+            "${1:[]}.map((${2:val}) => ${2:val})"
+        ],
+        "description": "map"
+    },
+    "find": {
+        "prefix": "fin",
+        "body": [
+            "${1:[]}.find((${2:val}) => ${2:val} === true)"
+        ],
+        "description": "find"
+    },
+    "filter": {
+        "prefix": "fil",
+        "body": [
+            "${1:[]}.filter((${2:val}) => ${2:val} === true)"
+        ],
+        "description": "filter"
+    },
+    "concat": {
+        "prefix": "con",
+        "body": [
+            "${1:[]}.concat(${2:[]})"
+        ],
+        "description": "concat"
+    },
+    "join": {
+        "prefix": "jo",
+        "body": [
+            "${1:[]}.join('${2:,}')"
+        ],
+        "description": "join"
+    },
+    "split": {
+        "prefix": "sp",
+        "body": [
+            "${1:''}.split('${2:,}')"
+        ],
+        "description": "split"
+    },
+    "reduce": {
+        "prefix": "red",
+        "body": [
+            "${1:[]}.reduce((sum, current) => sum + ${2:current}, 0)"
+        ],
+        "description": "reduce"
+    },
+    "includes": {
+        "prefix": "inc",
+        "body": [
+            "${1:[]}.includes(${2:val})"
+        ],
+        "description": "includes"
+    },
+    "sort": {
+        "prefix": "so",
+        "body": [
+            "${1:[]}.sort((a, b) => ${2:a > b})"
+        ],
+        "description": "sort"
+    },
+    "slice": {
+        "prefix": "sl",
+        "body": [
+            "${1:[]}.slice(${2:0, 5})"
+        ],
+        "description": "slice"
+    },
+    "push": {
+        "prefix": "pu",
+        "body": [
+            "${1:[]}.push(${2:val})"
+        ],
+        "description": "push"
+    },
+    "pop": {
+        "prefix": "po",
+        "body": [
+            "${1:[]}.pop()"
+        ],
+        "description": "pop"
+    },
+    "unshift": {
+        "prefix": "ush",
+        "body": [
+            "${1:[]}.unshift(${2:val})"
+        ],
+        "description": "unshift"
+    },
+    "shift": {
+        "prefix": "sh",
+        "body": [
+            "${1:[]}.shift()"
+        ],
+        "description": "shift"
+    },
+    // function
+    "return": {
+        "prefix": "r",
+        "body": [
+            "return $1"
+        ],
+        "description": "return"
+    },
+    "async": {
+        "prefix": "as",
+        "body": [
+            "async $1"
+        ],
+        "description": "async"
+    },
+    "arrow function": {
+        "prefix": "f",
+        "body": [
+            "($1 :$2): $2 => {",
+            "  $4",
+            "  return $1;",
+            "};",
+        ],
+        "description": "arrow function"
+    },
+    "await": {
+        "prefix": "aw",
+        "body": [
+            "await ${1}"
+        ],
+        "description": "非同期待ち"
+    },
+    "Promise": {
+        "prefix": "pr",
+        "body": [
+            "return new Promise((resolve, reject) => {",
+            "  $1",
+            "})"
+        ],
+        "description": "Promise"
+    },
+    "Promise parallel": {
+        "prefix": "pra",
+        "body": [
+            "await Promise.all([${1:PromiseFunc}])",
+            "  ${2:.then(([value1, value2]) => {\\}).catch((e) => {\\})}",
+        ],
+        "description": "Promise parallel"
+    },
+    "Promise sequence": {
+        "prefix": "prs",
+        "body": [
+            "await [${1:{func: PromiseFunc1, param: param1\\},{func: PromiseFunc2, param: param2\\}}]",
+        "  .reduce((promise, current) => {",
+      "    return promise.then(async (prev) => {",
+      "      return await current.func(current.param, prev)",
+        "    })",
+        "  }, Promise.resolve(null))",
+        ],
+        "description": "Promise sequence"
+    },
+    // JSON
+    "JSON.parse": {
+        "prefix": "jsp",
+        "body": [
+            "JSON.parse(${1:json})"
+        ],
+        "description": "JSON.parse"
+    },
+    "JSON.stringify": {
+        "prefix": "jss",
+        "body": [
+            "JSON.stringify(${1:obj})"
+        ],
+        "description": "JSON.stringify"
+    },
+    // import export
+    "export": {
+        "prefix": "e",
+        "body": [
+            "export $1"
+        ],
+        "description": "export"
+    },
+    "import": {
+        "prefix": "im",
+        "body": [
+            "import ${1:val} from '${2:module}'"
+        ],
+        "description": "import"
+    },
+    "import default": {
+        "prefix": "imd",
+        "body": [
+            "import 2:val from '${1:module}'"
+        ],
+        "description": "default import"
+    },
+    "export default": {
+        "prefix": "ed",
+        "body": [
+            "export default "
+        ],
+        "description": "export default"
+    },
+    // class
+    "class": {
+        "prefix": "cla",
+        "body": [
+            "class ${1:name} {",
+            "  constructor () {",
+            "  }",
+            "}"
+        ],
+        "description": "クラス"
+    },
+    // localStorage
+    "localstorage.getItem": {
+        "prefix": "lsg",
+        "body": [
+            "localStorage.getItem('${1}')",
+        ],
+        "description": "LocalStorage取得"
+    },
+    "localstorage.setItem": {
+        "prefix": "lss",
+        "body": [
+            "localStorage.setItem('${1}', ${1})",
+        ],
+        "description": "LocalStorage保存"
+    },
+    // number
+    "Number": {
+        "prefix": "num",
+        "body": [
+            "Number(${1:num})"
+        ],
+        "description": "Number"
+    },
+    "Math floor": {
+        "prefix": "mf",
+        "body": [
+            "Math.floor(${1:num})"
+        ],
+        "description": "Math floor"
+    },
+    "Math random": {
+        "prefix": "ran",
+        "body": [
+            "Math.random()"
+        ],
+        "description": "Math random"
+    },
+    "Number toFixed": {
+        "prefix": "tf",
+        "body": [
+            "${1:num}.toFixed(${2:3})"
+        ],
+        "description": "Number toFixed"
+    },
+    // timer
+    "setTimeout": {
+        "prefix": "tm",
+        "body": [
+            "setTimeout(() => {",
+            "  ",
+            "}, ${1:1000})",
+        ],
+        "description": "遅延処理"
+    },
+    // html tag
+    "div": {
+        "prefix": "d",
+        "body": [
+            "<div>$1</div>"
+        ],
+        "description": "division"
+    },
+    "a": {
+        "prefix": "a",
+        "body": [
+            "<a href='${1:url}'>${2:link}</a>"
+        ],
+        "description": "anchor link"
+    },
+    "h1〜h6": {
+        "prefix": "h",
+        "body": [
+            "<h${1:1}>${2}</h${1:1}>"
+        ],
+        "description": "h1〜h6"
+    },
+    "p": {
+        "prefix": "p",
+        "body": [
+            "<p>$1</p>"
+        ],
+        "description": "paragraph"
+    },
+    "hr": {
+        "prefix": "hr",
+        "body": [
+            "<hr/>"
+        ],
+        "description": "hr"
+    },
+    "ol": {
+        "prefix": "ol",
+        "body": [
+            "<ol>",
+            "  <li>${1:item}</li>",
+            "  <li>${1:item}</li>",
+            "  <li>${1:item}</li>",
+            "</ul>"
+        ],
+        "description": "order list"
+    },
+    "ul": {
+        "prefix": "ul",
+        "body": [
+            "<ul style='list-style:none'>",
+            "  <li>${1:item}</li>",
+            "  <li>${1:item}</li>",
+            "  <li>${1:item}</li>",
+            "</ul>"
+        ],
+        "description": "non-ordered list"
+    },
+    // form
+    "form": {
+        "prefix": "form",
+        "body": [
+            "<form action='${1:url}' method='post' enctype='multipart/form-data' accept-charset='UTF-8' >",
+            "  $2",
+            "  <input type='submit' value='submit' />",
+            "</form>"
+        ],
+        "description": "form"
+    },
+    "label": {
+        "prefix": "la",
+        "body": [
+            "<label for='${1:id}'>${2:label}</label>"
+        ],
+        "description": "label"
+    },
+    "button": {
+        "prefix": "bu",
+        "body": [
+            "<button name='${1:btn}' onclick='${2:alert(\"click!\")}'>${3:Button}</button>"
+        ],
+        "description": "button"
+    },
+    "text": {
+        "prefix": "txt",
+        "body": [
+            "<input type='text' name='${1:txt}' placeholder='${2:入力欄}' ${3:require} />"
+        ],
+        "description": "text入力"
+    },
+    "textarea": {
+        "prefix": "txa",
+        "body": [
+            "<textarea name='${1:txta}'></textarea>"
+        ],
+        "description": "複数行text入力"
+    },
+    "password": {
+        "prefix": "pa",
+        "body": [
+            "<input type='password' name='${1:pass}' placeholder='${2:password}' require />"
+        ],
+        "description": "password"
+    },
+    "checkbox": {
+        "prefix": "ch",
+        "body": [
+            "<label for='${1:chk}'><input id='${1:chk}' type='checkbox' name='${1:chk}' value='${2:value}' />${2:value}</label>",
+        ],
+        "description": "checkbox"
+    },
+    "radio": {
+        "prefix": "ra",
+        "body": [
+        "<label for='${1:rad}1' class='radio-inline'><input id='${1:rad}1' type='radio' name='${1:rad}' value='${2:value}1' checked />${2:value}1</label>",
+      "<label for='${1:rad}2' class='radio-inline'><input id='${1:rad}2' type='radio' name='${1:rad}' value='${2:value}2' />${2:value}2</label>",
+      "<label for='${1:rad}3' class='radio-inline'><input id='${1:rad}3' type='radio' name='${1:rad}' value='${2:value}3' />${2:value}3</label>",
+        ],
+        "description": "checkbox"
+    },
+    "select": {
+        "prefix": "sel",
+        "body": [
+      "<select name='${1:sel}'>",
+      "  <option value='${2:value}1'>${3:項目}1</option>",
+      "  <option value='${2:value}2'>${3:項目}2</option>",
+        "  <option value='${2:value}3'>${3:項目}3</option>",
+      "</select>",
+        ],
+        "description": "select"
+    },
+    "range": {
+        "prefix": "ran",
+        "body": [
+            "<input type='range' name='${1:range}' min='0' max='100' step='1' />"
+        ],
+        "description": "range picker"
+    },
+    "file": {
+        "prefix": "file",
+        "body": [
+            "<input type='file' name='${1:file}' accept='${2:image/*,video/*,audio/*}' />"
+        ],
+        "description": "file"
+    },
+    "color picker": {
+        "prefix": "color",
+        "body": [
+            "<input type='color' name='${1:color}' />"
+        ],
+        "description": "color picker"
+    },
+    "date picker": {
+        "prefix": "dp",
+        "body": [
+            "<input type='date' name='${1:date}' />"
+        ],
+        "description": "date picker"
+    },
+    // media
+    "img": {
+        "prefix": "img",
+        "body": [
+            "<img src='${1:https://picsum.photos/300/300/?random}' />"
+        ],
+        "description": "img"
+    },
+    "audio": {
+        "prefix": "au",
+        "body": [
+            "<audio src='${2:url}' controls></audio>"
+        ],
+        "description": "audio"
+    },
+    "video": {
+        "prefix": "vi",
+        "body": [
+            "<video src='${2:url}' width='${3:640}' height='${4:480}' controls></video>"
+        ],
+        "description": "video"
+    },
+    "canvas": {
+        "prefix": "ca",
+        "body": [
+            "<canvas width='${2:640}' height='${3:480}'></canvas>"
+        ],
+        "description": "canvas"
+    },
+    "iframe": {
+        "prefix": "ifr",
+        "body": [
+            "<iframe src='${1:url}' width='${2:640}' height='${3:480}' seamless sandbox='allow-same-origin allow-scripts' ></iframe>"
+        ],
+        "description": "iframe"
+    },
+    "fetch": {
+        "prefix": "fet",
+        "body": [
+            "const data = await fetch('${1:/api}', {",
+            "  method: 'POST',",
+            "  headers: {'Content-Type': 'application/json'},",
+            "  body: JSON.stringify(${2:{data: 'data'\\}}),",
+            "}).then(async (response) => {",
+            "  return await response.json()",
+            "})",
+        ],
+        "description": "fetch"
+    },
+    // React
+    "style": {
+        "prefix": "st",
+        "body": [
+            "style={{$1}}",
+        ],
+        "description": "style"
+    },
+    "className": {
+        "prefix": "cln",
+        "body": [
+            "className={$1}",
+        ],
+        "description": "className"
+    },
+     "ReactComponent": {
+        "prefix": "rea",
+        "body": [
+            "import React from 'react';",
+            "",
+            "const ${1:Name}: React.FC = () => {",
+            "  $2",
+            "  return (",
+            "    <div/>",
+            "  );",
+            "};",
+            "",
+            "export default ${1:Name};"
+        ],
+        "description": "React function component"
+    },
+    "ref": {
+        "prefix": "ref",
+        "body": [
+            "ref={${1:node} => this.${1:node} = ${1:node} }",
+        ],
+        "description": "ref"
+    },
+    // // Material-UI
+    // "classes": {
+    //     "prefix": "cls",
+    //     "body": [
+    //         "classes={$1}",
+    //     ],
+    //     "description": "classes"
+    // },
+    // "withStyles": {
+    //     "prefix": "wst",
+    //     "body": [
+    //         "withStyles(theme => ({",
+    //         "  ",
+    //         "}), {withTheme: true})(${1:props => <div/>})",
+    //     ],
+    //     "description": "withStyles"
+    // },
+    // "withStyles decorators": {
+    //     "prefix": "dwst",
+    //     "body": [
+    //         "@withStyles(theme => ({",
+    //         "  ",
+    //         "}), {withTheme: true})",
+    //     ],
+    //     "description": "withStyles decorators"
+    // },
+    // "withStyles import": {
+    //     "prefix": "imwst",
+    //     "body": [
+    //         "import { withStyles } from '@material-ui/core'",
+    //     ],
+    //     "description": "withStyles import"
+    // },
+    // "AppBar import": {
+    //     "prefix": "imapp",
+    //     "body": [
+    //         "import AppBar from '@material-ui/core/AppBar'",
+    //         "import Toolbar from '@material-ui/core/Toolbar'",
+    //     ],
+    //     "description": "AppBar iport"
+    // },
+    // "AppBar": {
+    //     "prefix": "app",
+    //     "body": [
+    //         "<AppBar position='static'>",
+    //         "  <Toolbar>",
+    //         "    ${1:タイトル}",
+    //         "  </Toolbar>",
+    //         "</AppBar>"
+    //     ],
+    //     "description": "AppBar"
+    // },
+    // "Avatar import": {
+    //     "prefix": "imav",
+    //     "body": [
+    //         "import Avatar from '@material-ui/core/Avatar'"
+    //     ],
+    //     "description": "Avatar import"
+    // },
+    // "Avatar": {
+    //     "prefix": "av",
+    //     "body": [
+    //         "<Avatar src='${1:https://unsplash.it/48/48?random}' />"
+    //     ],
+    //     "description": "Avatar"
+    // },
+    // "Badge import": {
+    //     "prefix": "imba",
+    //     "body": [
+    //         "import Badge from '@material-ui/core/Badge'"
+    //     ],
+    //     "description": "Badge import"
+    // },
+    // "Badge": {
+    //     "prefix": "ba",
+    //     "body": [
+    //         "<Badge badgeContent={${1:1}} color='primary'>$2</Badge>"
+    //     ],
+    //     "description": "Badge"
+    // },
+    // "BottomNavigation import": {
+    //     "prefix": "imbot",
+    //     "body": [
+    //         "import BottomNavigation from '@material-ui/core/BottomNavigation'",
+    //         "import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'",
+    //         "import FavoriteIcon from '@material-ui/icons/Favorite'",
+    //     ],
+    //     "description": "BottomNavigation import"
+    // },
+    // "BottomNavigation": {
+    //     "prefix": "bot",
+    //     "body": [
+    //         "<BottomNavigation",
+    //   "  value={this.state.selected || 0}",
+    //   "  onChange={(event, selected) => this.setState({selected})}",
+    //   "  showLabels",
+    //   ">",
+    //   "  <BottomNavigationAction label='${1:Favorites}' icon={<FavoriteIcon />} />",
+    //   "  <BottomNavigationAction label='${1:Favorites}' icon={<FavoriteIcon />} />",
+    //   "  <BottomNavigationAction label='${1:Favorites}' icon={<FavoriteIcon />} />",
+    //   "</BottomNavigation>",
+    //     ],
+    //     "description": "BottomNavigation"
+    // },
+    // "Button import": {
+    //     "prefix": "imbu",
+    //     "body": [
+    //         "import Button from '@material-ui/core/Button'"
+    //     ],
+    //     "description": "Button import"
+    // },
+    // "Button": {
+    //     "prefix": "bu",
+    //     "body": [
+    //         "<Button size='medium' variant='contained' color='primary' onClick={() => {}}>${1:Button}</Button>"
+    //     ],
+    //     "description": "Button"
+    // },
+    // "Card import": {
+    //     "prefix": "imca",
+    //     "body": [
+    //         "import Card from '@material-ui/core/Card'",
+    //         "import CardActions from '@material-ui/core/CardActions'",
+    //         "import CardContent from '@material-ui/core/CardContent'",
+    //         "import CardMedia from '@material-ui/core/CardMedia'",
+    //     ],
+    //     "description": "Card import"
+    // },
+    // "Card": {
+    //     "prefix": "ca",
+    //     "body": [
+    //         "<Card style={{maxWidth: 240}}>",
+    //         "  <CardMedia style={{height: 120}} image='https://unsplash.it/240/120?random' />",
+    //         "  <CardContent></CardContent>",
+    //         "  <CardActions><Button size='small' variant='contained' color='primary' onClick={() => {}}>${1:Button}</Button></CardActions>",
+    //         "</Card>"
+    //     ],
+    //     "description": "Card"
+    // },
+    // "Chip import": {
+    //     "prefix": "imchi",
+    //     "body": [
+    //         "import Chip from '@material-ui/core/Chip'"
+    //     ],
+    //     "description": "Chip"
+    // },
+    // "Chip": {
+    //     "prefix": "chi",
+    //     "body": [
+    //         "<Chip label='${2:テキスト}' onClick={() => {}} onDelete={() => {}} />"
+    //     ],
+    //     "description": "Chip"
+    // },
+    // "Dialog import": {
+    //     "prefix": "imdia",
+    //     "body": [
+    //         "import Dialog from '@material-ui/core/Dialog'",
+    //         "import DialogTitle from '@material-ui/core/DialogTitle'",
+    //         "import DialogContent from '@material-ui/core/DialogContent'",
+    //         "import DialogActions from '@material-ui/core/DialogActions'",
+    //     ],
+    //     "description": "Dialog import"
+    // },
+    // "Dialog": {
+    //     "prefix": "dia",
+    //     "body": [
+    //         "<Dialog open={!!this.state.${1:open}} onClose={() => this.setState({${1:open}: false})}>",
+    //         "  <DialogTitle>${2:タイトル}</DialogTitle>",
+    //         "  <DialogContent></DialogContent>",
+    //         "  <DialogActions><Button size='small' variant='contained' color='primary' onClick={() => this.setState({${1:open}: false})}>${3:Button}</Button></DialogActions>",
+    //         "</Dialog>"
+    //     ],
+    //     "description": "Dialog"
+    // },
+    // "Drawer import": {
+    //     "prefix": "imdra",
+    //     "body": [
+    //         "import Drawer from '@material-ui/core/Drawer'",
+    //     ],
+    //     "description": "Drawer import"
+    // },
+    // "Drawer": {
+    //     "prefix": "dra",
+    //     "body": [
+    //         "<Button size='small' onClick={() => this.setState({${1:open}: true})}>メニュー</Button>",
+    //         "<Drawer anchor='bottom' open={this.state.${1:open}} onClose={() => this.setState({${1:open}: false})}>",
+    //   "  <div",
+    //   "    tabIndex={0}",
+    //   "    role='button'",
+    //   "    onClick={() => this.setState({${1:open}: false})}>",
+    //         "    <List>",
+    //         "      {",
+    //         "        ${2:[1, 2, 3]}.map(v =>",
+    //         "          <ListItem button divider key={v} onClick={() => this.setState({${1:open}: false})}>",
+    //         "            <ListItemText primary={`項目\\${v}`} secondary={`項目\\${v} サブ`} />",
+    //         "          </ListItem>",
+    //         "        )",
+    //         "      }",
+    //         "    </List>",
+    //   "  </div>",
+    //   "</Drawer>",
+    //     ],
+    //     "description": "Drawer"
+    // },
+    // "GridList import": {
+    //     "prefix": "imgr",
+    //     "body": [
+    //         "import GridList from '@material-ui/core/GridList'",
+    //         "import GridListTile from '@material-ui/core/GridListTile'",
+    //     ],
+    //     "description": "GridList import"
+    // },
+    // "GridList": {
+    //     "prefix": "gr",
+    //     "body": [
+    //         "<GridList cellHeight={160} cols={3}>",
+    //   "  {[",
+    //   "    {img: 'https://unsplash.it/320/160?random&1', cols: 2},",
+    //   "    {img: 'https://unsplash.it/160/160?random&2', cols: 1},",
+    //   "    {img: 'https://unsplash.it/160/160?random&3', cols: 1},",
+    //   "    {img: 'https://unsplash.it/320/160?random&4', cols: 2},",
+    //   "  ].map((tile, idx) => (",
+    //   "    <GridListTile key={idx} cols={tile.cols || 1}>",
+    //   "      <img src={tile.img} />",
+    //   "    </GridListTile>",
+    //   "  ))}",
+    //   "</GridList>",
+    //     ],
+    //     "description": "GridList"
+    // },
+    // "ExpansionPanel import": {
+    //     "prefix": "imexp",
+    //     "body": [
+    //         "import ExpansionPanel from '@material-ui/core/ExpansionPanel'",
+    //         "import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'",
+    //         "import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'",
+    //         "import ExpandMoreIcon from '@material-ui/icons/ExpandMore'",
+    //     ],
+    //     "description": "ExpansionPanel import"
+    // },
+    // "ExpansionPanel": {
+    //     "prefix": "exp",
+    //     "body": [
+    //         "<ExpansionPanel",
+    //   "  classes={{expanded: {margin: 0}}}>",
+    //   "  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>${1:サマリ}</ExpansionPanelSummary>",
+    //         "  <ExpansionPanelDetails>${2:詳細}</ExpansionPanelDetails>",
+    //   "</ExpansionPanel>",
+    //     ],
+    //     "description": "ExpansionPanel"
+    // },
+    // "List import": {
+    //     "prefix": "imli",
+    //     "body": [
+    //         "import List from '@material-ui/core/List'",
+    //         "import ListItem from '@material-ui/core/ListItem'",
+    //         "import ListItemText from '@material-ui/core/ListItemText'",
+    //     ],
+    //     "description": "List import"
+    // },
+    // "List": {
+    //     "prefix": "li",
+    //     "body": [
+    //         "<List>",
+    //         "  {",
+    //         "    ${1:[1, 2, 3]}.map(v =>",
+    //         "      <ListItem button divider key={v} onClick={() => {}}>",
+    //         "        <ListItemText primary={`項目\\${v}`} secondary={`項目\\${v} サブ`} />",
+    //         "      </ListItem>",
+    //         "    )",
+    //         "  }",
+    //         "</List>",
+    //     ],
+    //     "description": "List"
+    // },
+    // "Menu import": {
+    //     "prefix": "imme",
+    //     "body": [
+    //         "import Menu from '@material-ui/core/Menu'",
+    //         "import MenuItem from '@material-ui/core/MenuItem'",
+    //     ],
+    //     "description": "Menu"
+    // },
+    // "Menu": {
+    //     "prefix": "me",
+    //     "body": [
+    //         "<Button size='small' onClick={e => this.setState({anchor: e.currentTarget})}>${1:メニュー}</Button>",
+    //         "<Menu",
+    //         "  open={!!this.state.anchor}",
+    //         "  anchorEl={this.state.anchor}",
+    //         "  onClose={() => this.setState({anchor: null})}",
+    //         "  MenuListProps={{style: {padding: 0}}}",
+    //         ">",
+    //         "  {",
+    //         "    ${2:[1, 2, 3]}.map(v =>",
+    //         "      <MenuItem key={v} onClick={() => {}}>{`項目\\${v}`}</MenuItem>",
+    //         "    )",
+    //         "  }",
+    //         "</Menu>",
+    //     ],
+    //     "description": "Menu"
+    // },
+    // "Paper import": {
+    //     "prefix": "impa",
+    //     "body": [
+    //         "import Paper from '@material-ui/core/Paper'"
+    //     ],
+    //     "description": "Paper import"
+    // },
+    // "Paper": {
+    //     "prefix": "pa",
+    //     "body": [
+    //         "<Paper elevation={4}>$1</Paper>"
+    //     ],
+    //     "description": "Paper"
+    // },
+    // "Datetime Picker": {
+    //     "prefix": "dtpi",
+    //     "body": [
+    //         "<TextField type='datetime-local' defaultValue={new Date().toISOString().slice(0, 16)} InputLabelProps={{shrink: true}}/>"
+    //     ],
+    //     "description": "Datetime Picker"
+    // },
+    // "CircularProgress import": {
+    //     "prefix": "imcpg",
+    //     "body": [
+    //         "import CircularProgress from '@material-ui/core/CircularProgress'",
+    //     ],
+    //     "description": "CircularProgress import"
+    // },
+    // "CircularProgress": {
+    //     "prefix": "cpg",
+    //     "body": [
+    //         "<CircularProgress size={${1:30}} thickness={${2:3}} />",
+    //     ],
+    //     "description": "CircularProgress"
+    // },
+    // "LinearProgress import": {
+    //     "prefix": "imlpg",
+    //     "body": [
+    //         "import LinearProgress from '@material-ui/core/LinearProgress'",
+    //     ],
+    //     "description": "LinearProgress import"
+    // },
+    // "LinearProgress": {
+    //     "prefix": "lpg",
+    //     "body": [
+    //         "<LinearProgress />",
+    //     ],
+    //     "description": "LinearProgress"
+    // },
+    // "Checkbox import": {
+    //     "prefix": "imch",
+    //     "body": [
+    //         "import Checkbox from '@material-ui/core/Checkbox'",
+    //         "import FormControlLabel from '@material-ui/core/FormControlLabel'",
+    //     ],
+    //     "description": "Checkbox"
+    // },
+    // "Checkbox": {
+    //     "prefix": "ch",
+    //     "body": [
+    //         "<FormControlLabel",
+    //   "  control={",
+    //         "    <Checkbox",
+    //         "      checked={this.state.${1:checked}}",
+    //         "      onChange={(e) => this.setState({${1:checked}: e.target.checked})} />",
+    //         "  }",
+    //         "  label='${2:ラベル}'",
+    //         "/>",
+    //     ],
+    //     "description": "Checkbox"
+    // },
+    // "Radio import": {
+    //     "prefix": "imra",
+    //     "body": [
+    //         "import Radio from '@material-ui/core/Radio'",
+    //         "import FormControlLabel from '@material-ui/core/FormControlLabel'",
+    //     ],
+    //     "description": "Radio"
+    // },
+    // "Radio": {
+    //     "prefix": "ra",
+    //     "body": [
+    //         "<FormControlLabel value='${1:value}' control={<Radio />} label='${2:ラベル}' />",
+    //     ],
+    //     "description": "Radio"
+    // },
+    // "Switch import": {
+    //     "prefix": "imswi",
+    //     "body": [
+    //         "import Switch from '@material-ui/core/Switch'",
+    //         "import FormControlLabel from '@material-ui/core/FormControlLabel'",
+    //     ],
+    //     "description": "Switch"
+    // },
+    // "Switch": {
+    //     "prefix": "swi",
+    //     "body": [
+    //         "<FormControlLabel",
+    //         "  control={",
+    //         "    <Switch",
+    //         "      checked={this.state.${1:checked}}",
+    //         "      onChange={(e) => this.setState({${1:checked}: e.target.checked})}",
+    //         "    />",
+    //   "  }",
+    //   "  label='${2:ラベル}'",
+    //   "/>",
+    //     ],
+    //     "description": "Switch"
+    // },
+    // "Select import": {
+    //     "prefix": "imse",
+    //     "body": [
+    //         "import FormControl from '@material-ui/core/FormControl'",
+    //         "import InputLabel from '@material-ui/core/InputLabel'",
+    //         "import MenuItem from '@material-ui/core/MenuItem'",
+    //         "import Select from '@material-ui/core/Select'",
+    //     ],
+    //     "description": "Select"
+    // },
+    // "Select": {
+    //     "prefix": "se",
+    //     "body": [
+    //         "<FormControl>",
+    //         "  <InputLabel htmlFor='${1:inputLabel}'>選択項目</InputLabel>",
+    //         "  <Select",
+    //         "    value={this.state.${2:count} || ''}",
+    //         "    onChange={(e) => this.setState({${2:count}: e.target.value})}",
+    //         "    inputProps={{",
+    //         "      id: '${1:inputLabel}',",
+    //         "    }}",
+    //         "  >",
+    //   "    <MenuItem value={1}>選択肢１</MenuItem>",
+    //   "    <MenuItem value={2}>選択肢２</MenuItem>",
+    //   "    <MenuItem value={3}>選択肢３</MenuItem>",
+    //   "  </Select>",
+    //   "</FormControl>",
+    //     ],
+    //     "description": "Select"
+    // },
+    // "Snackbar import": {
+    //     "prefix": "imsna",
+    //     "body": [
+    //         "import Snackbar from '@material-ui/core/Snackbar'",
+    //     ],
+    //     "description": "Snackbar import"
+    // },
+    // "Snackbar": {
+    //     "prefix": "sna",
+    //     "body": [
+    //         "<Snackbar",
+    //         "  open={!!this.state.${1:msg}}",
+    //         "  anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}",
+    //         "  onClose={() => this.setState({${1:msg}: null})}",
+    //         "  autoHideDuration={2000}",
+    //         "  message={this.state.${1:msg}} />",
+    //     ],
+    //     "description": "Snackbar"
+    // },
+    // "Stepper import": {
+    //     "prefix": "imstep",
+    //     "body": [
+    //         "import Stepper from '@material-ui/core/Stepper'",
+    //         "import Step from '@material-ui/core/Step'",
+    //         "import StepLabel from '@material-ui/core/StepLabel'",
+    //     ],
+    //     "description": "Stepper import"
+    // },
+    // "Stepper": {
+    //     "prefix": "step",
+    //     "body": [
+    //             "<div>",
+    //     "  <Stepper activeStep={this.state.activeStep || 0} ${1:orientation='vertical'}>",
+    //     "    { ${2:['項目１', '項目２', '項目３']}.map(label => (",
+    //     "      <Step key={label}>",
+    //     "        <StepLabel>{label}</StepLabel>",
+    //     "      </Step>",
+    //     "    ))}",
+    //     "  </Stepper>",
+    //     "  <Button size='medium' variant='raised' color='primary' onClick={() => this.setState({activeStep: (this.state.activeStep || 0) - 1})} disabled={(this.state.activeStep || 0) === 0}>前へ</Button>",
+    //     "  <Button size='medium' variant='raised' color='primary' onClick={() => this.setState({activeStep: (this.state.activeStep || 0) + 1 })} disabled={(this.state.activeStep || 0) === ${2:['項目１', '項目２', '項目３']}.length - 1}>次へ</Button>",
+    //             "</div>",
+    //     ],
+    //     "description": "Stepper"
+    // },
+    // "MobileStepper import": {
+    //     "prefix": "immstep",
+    //     "body": [
+    //         "import MobileStepper from '@material-ui/core/MobileStepper'",
+    //         "import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'",
+    //         "import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'",
+    //     ],
+    //     "description": "MobileStepper import"
+    // },
+    // "MobileStepper": {
+    //     "prefix": "mstep",
+    //     "body": [
+    //         "<MobileStepper",
+    //   "  steps={${1:3}}",
+    //   "  position='static'",
+    //   "  activeStep={this.state.activeStep || 0}",
+    //   "  nextButton={",
+    //   "    <Button size='small' onClick={() => this.setState({activeStep: (this.state.activeStep || 0) + 1})} disabled={(this.state.activeStep || 0) === ${1:3} - 1}>",
+    //   "      次へ",
+    //   "      <KeyboardArrowRight />",
+    //   "    </Button>",
+    //   "  }",
+    //   "  backButton={",
+    //   "    <Button size='small' onClick={() => this.setState({activeStep: (this.state.activeStep || 0) - 1})} disabled={(this.state.activeStep || 0) === 0}>",
+    //   "      <KeyboardArrowLeft />",
+    //   "      前へ",
+    //   "    </Button>",
+    //   "  }",
+    //   "/>",
+    //     ],
+    //     "description": "MobileStepper"
+    // },
+    // "Table import": {
+    //     "prefix": "imta",
+    //     "body": [
+    //         "import Table from '@material-ui/core/Table'",
+    //         "import TableBody from '@material-ui/core/TableBody'",
+    //         "import TableCell from '@material-ui/core/TableCell'",
+    //         "import TableHead from '@material-ui/core/TableHead'",
+    //         "import TableRow from '@material-ui/core/TableRow'",
+    //     ],
+    //     "description": "Table import"
+    // },
+    // "Table": {
+    //     "prefix": "ta",
+    //     "body": [
+    //         "<Table>",
+    //   "  <TableHead>",
+    //   "    <TableRow>",
+    //   "      <TableCell>名前</TableCell>",
+    //   "      <TableCell>年齢</TableCell>",
+    //   "      <TableCell>身長</TableCell>",
+    //   "    </TableRow>",
+    //   "  </TableHead>",
+    //   "  <TableBody>",
+    //   "    {[",
+    //   "      {name: '太郎', age: 20, height: '180cm'},",
+    //   "      {name: '次郎', age: 18, height: '170cm'},",
+    //   "      {name: '花子', age: 16, height: '160cm'},",
+    //   "    ].map(((n, idx) => (",
+    //   "      <TableRow key={idx}>",
+    //   "        <TableCell component='th' scope='row'>{n.name}</TableCell>",
+    //   "        <TableCell>{n.age}</TableCell>",
+    //   "        <TableCell>{n.height}</TableCell>",
+    //   "      </TableRow>",
+    //   "    )",
+    //   "    )}",
+    //   "  </TableBody>",
+    //   "</Table>",
+    //     ],
+    //     "description": "Table"
+    // },
+    // "TextField import": {
+    //     "prefix": "imtx",
+    //     "body": [
+    //         "import TextField from '@material-ui/core/TextField'",
+    //     ],
+    //     "description": "TextField import"
+    // },
+    // "TextField": {
+    //     "prefix": "tx",
+    //     "body": [
+    //         "<TextField label='${1:入力欄}' margin='normal' ${2:multiline rows='4'} ${3:error} />",
+    //     ],
+    //     "description": "TextField"
+    // },
+    // "Tab import": {
+    //     "prefix": "imtab",
+    //     "body": [
+    //         "import Tabs from '@material-ui/core/Tabs'",
+    //         "import Tab from '@material-ui/core/Tab'",
+    //     ],
+    //     "description": "Tab import"
+    // },
+    // "Tab": {
+    //     "prefix": "tab",
+    //     "body": [
+    //         "<div>",
+    //         "  <AppBar position='static'>",
+    //         "    <Tabs value={this.state.${1:selected}} onChange={(e, ${1:selected}) => this.setState({${1:selected}})} fullWidth >",
+    //         "      <Tab label='項目1' />",
+    //         "      <Tab label='項目2' />",
+    //         "      <Tab label='項目3' />",
+    //         "    </Tabs>",
+    //         "  </AppBar>",
+    //         "  {this.state.${1:selected} === 0 && <div>項目1 コンテンツ</div>}",
+    //         "  {this.state.${1:selected} === 1 && <div>項目2 コンテンツ</div>}",
+    //         "  {this.state.${1:selected} === 2 && <div>項目3 コンテンツ</div>}",
+    //         "</div>",
+    //     ],
+    //     "description": "Tab"
+    // },
+    // "Tooltip import": {
+    //     "prefix": "imtip",
+    //     "body": [
+    //         "import Tooltip from '@material-ui/core/Tooltip'",
+    //     ],
+    //     "description": "Tooltip import"
+    // },
+    // "Tooltip": {
+    //     "prefix": "tip",
+    //     "body": [
+    //         "<Tooltip title='${1:説明}'>",
+    //         "  <Button size='small' onClick={() => {}}>ボタン</Button>",
+    //         "</Tooltip>",
+    //     ],
+    //     "description": "Tooltip"
+    // },
+    // // Material-Icon
+    // "Material Icon import": {
+    //     "prefix": "imic",
+    //     "body": [
+    //         "import ${1:Name} from '@material-ui/icons/${1:Name}'",
+    //     ],
+    //     "description": "Material Icon import"
+    // },
+    // // Styled Components
+    // "Styled Components import": {
+    //     "prefix": "sc",
+    //     "body": [
+    //         "import styled from 'styled-components'",
+    //     ],
+    //     "description": "Styled Components import"
+    // },
+    // "Styled Components": {
+    //     "prefix": "sc",
+    //     "body": [
+    //         "const Styled${1:MuiComponent} = styled(${1:MuiComponent})`",
+    //     "  && {",
+    //     "    ${1:style}",
+    //     "  }",
+    //         "`",
+    //     ],
+    //     "description": "Styled Components"
+    // },
+    // // レイアウト
+    // "flexbox": {
+    //     "prefix": "fl",
+    //     "body": [
+    //         "display: flex;",
+    //         "flex-direction: ${1:row,row-reverse,column,column-reverse};",
+    //     "justify-content: ${2:flex-start,flex-end,space-between,space-around};",
+    //         "align-items: ${3:stretch,flex-start,flex-end,center,base-line};",
+    //         "flex-wrap: ${4:nowrap,wrap,wrap-reverse};",
+    //     ],
+    //     "description": "flexbox"
+    // },
+    // "grid": {
+    //     "prefix": "gr",
+    //     "body": [
+    //         "display: inline-grid;",
+    //         "grid-template-rows: ${1:100px 50px};",
+    //     "grid-template-columns: ${2:50px 100px 50px};",
+    //     ],
+    //     "description": "grid"
+    // },
+    // "grid-item": {
+    //     "prefix": "gri",
+    //     "body": [
+    //         "grid-row: ${1:1 / 2};",
+    //     "grid-column: ${2:2 / 3};",
+    //     ],
+    //     "description": "grid-item"
+    // },
+    // // レスポンシブ
+    // "media query": {
+    //     "prefix": "me",
+    //     "body": [
+    //         "@media screen and (max-width: 768px) {",
+    //     "  $1",
+    //         "}",
+    //     ],
+    //     "description": "レスポンシブレイアウト"
+    // },
+    // // スティッキー要素
+    // "sticky": {
+    //     "prefix": "sti",
+    //     "body": [
+    //         "position: sticky;",
+    //     ],
+    //     "description": "スティッキー"
+    // },
+    // // マウスオーバー
+    // "hover": {
+    //     "prefix": "ho",
+    //     "body": [
+    //         "&:hover {",
+    //     "  $1",
+    //         "}",
+    //     ],
+    //     "description": "マウスオーバー"
+    // },
+    // // 余白
+    // "padding": {
+    //     "prefix": "p",
+    //     "body": [
+    //         "padding: ${1:1rem};",
+    //     ],
+    //     "description": "パディング"
+    // },
+    // "margin": {
+    //     "prefix": "m",
+    //     "body": [
+    //         "margin: ${1:1rem};",
+    //     ],
+    //     "description": "マージン"
+    // },
+    // // 背景
+    // "background-color": {
+    //     "prefix": "bgc",
+    //     "body": [
+    //         "background-color: ${1:#888};",
+    //     ],
+    //     "description": "背景色"
+    // },
+    // "background-image": {
+    //     "prefix": "bgi",
+    //     "body": [
+    //         "background: url('${1:https://unsplash.it/300/300?random}');",
+    //     "background-size: ${1:100}px ${2:50}px;",
+    //       "width: ${1:100}px;",
+    //     "height: ${2:50}px;",
+    //     ],
+    //     "description": "背景画像"
+    // },
+    // "background-blend-mode": {
+    //     "prefix": "bgb",
+    //     "body": [
+    //         "background: url('${1:https://unsplash.it/300/300?random=1}'),url('${2:https://unsplash.it/300/300?random=2}');",
+    //         "background-blend-mode: ${1:multiply,darken,lighten,screen,overlay,difference};",
+    //     ],
+    //     "description": "背景画像ブレンディング"
+    // },
+    // "linear-gradient": {
+    //     "prefix": "grl",
+    //     "body": [
+    //         "background: linear-gradient(${1:45}deg,${2:red,orange,yellow,green,blue,purple});",
+    //     ],
+    //     "description": "線形グラデーション"
+    // },
+    // "radial-gradient": {
+    //     "prefix": "grc",
+    //     "body": [
+    //         "background: radial-gradient(center,circle,${1:red,orange,yellow,green,blue,purple});",
+    //     ],
+    //     "description": "円形グラデーション"
+    // },
+    // // 位置、サイズ
+    // "left": {
+    //     "prefix": "le",
+    //     "body": [
+    //         "left: ${1:4px,0.01vw};",
+    //     ],
+    //     "description": "横位置"
+    // },
+    // "top": {
+    //     "prefix": "to",
+    //     "body": [
+    //         "top: ${1:4px,0.01vh};",
+    //     ],
+    //     "description": "縦位置"
+    // },
+    // "width": {
+    //     "prefix": "w",
+    //     "body": [
+    //         "width: ${1:30%};",
+    //     ],
+    //     "description": "幅"
+    // },
+    // "height": {
+    //     "prefix": "h",
+    //     "body": [
+    //         "height: ${1:30%};",
+    //     ],
+    //     "description": "高さ"
+    // },
+    // // 文字
+    // "color": {
+    //     "prefix": "c",
+    //     "body": [
+    //         "color: ${1:#888};",
+    //     ],
+    //     "description": "文字色"
+    // },
+    // "font-size": {
+    //     "prefix": "fs",
+    //     "body": [
+    //         "font-size: ${1:1.2rem};",
+    //     ],
+    //     "description": "文字サイズ"
+    // },
+    // "font-weight": {
+    //     "prefix": "fw",
+    //     "body": [
+    //         "font-weight: ${1:normal, bold, 500};",
+    //     ],
+    //     "description": "文字サイズ"
+    // },
+    // "text-decoration": {
+    //     "prefix": "td",
+    //     "body": [
+    //         "text-decoration: ${1:none,overline,underline,line-through};",
+    //     ],
+    //     "description": "文字装飾"
+    // },
+    // "WebFont": {
+    //     "prefix": "wf",
+    //     "body": [
+    //         "@font-face {",
+    //         "  src: url('${1:fontname}.ttf') format('truetype');",
+    //         "  font-family: '${1:fontname}';",
+    //         "}",
+    //     ],
+    //     "description": "WebFont"
+    // },
+    // // 影
+    // "text-shadow": {
+    //     "prefix": "ts",
+    //     "body": [
+    //         "text-shadow: ${1:1rem 1rem 1rem rgba(0,0,0,1)};",
+    //     ],
+    //     "description": "テキスト影"
+    // },
+    // "box-shadow:": {
+    //     "prefix": "bs",
+    //     "body": [
+    //         "text-shadow: ${1:1rem 1rem 1rem 1rem rgba(0,0,0,0.8)};",
+    //     ],
+    //     "description": "DOM影"
+    // },
+    // // 領域内表示方法
+    // "overflow": {
+    //     "prefix": "o",
+    //     "body": [
+    //         "overflow: ${1:visible,hidden,scroll,auto};",
+    //     ],
+    //     "description": "領域外表示"
+    // },
+    // "overflow-wrap": {
+    //     "prefix": "ow",
+    //     "body": [
+    //         "word-wrap: ${1:normal,break-word};",
+    //         "overflow-wrap: ${1:normal,break-word};",
+    //     ],
+    //     "description": "領域外の折り返し表示"
+    // },
+    // "white-space": {
+    //     "prefix": "ws",
+    //     "body": [
+    //         "white-space: ${1:normal,pre,no-wrap};",
+    //     ],
+    //     "description": "改行文字解釈"
+    // },
+    // // ボーダー
+    // "border": {
+    //     "prefix": "b",
+    //     "body": [
+    //         "border: '${1:solid,dashed,groovy,ridge,inset,outset} ${2:0.1rem} ${3:black}';",
+    //     ],
+    //     "description": "ボーダー"
+    // },
+    // "border-radius": {
+    //     "prefix": "br",
+    //     "body": [
+    //         "border-radius: ${1:1rem};",
+    //     ],
+    //     "description": "角丸ボーダー"
+    // },
+    // // クリッピング
+    // "clip-path": {
+    //     "prefix": "cli",
+    //     "body": [
+    //         "clip-path: ${1:circle(50% at 50% 50%),polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%),polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%),polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)};",
+    //     ],
+    //     "description": "クリッピング(円、星、六角形、吹き出し)"
+    // },
+    // // フィルター
+    // "css filter": {
+    //     "prefix": "fil",
+    //     "body": [
+    //         "filter: ${1:grayscale(50%),blur(50%),,brightness(50%),contrast(50%),invert(50%),saturate(50%),sepia(50%)};",
+    //     ],
+    //     "description": "CSSフィルター"
+    // },
+    // // 幾何変換
+    // "transform": {
+    //     "prefix": "trf",
+    //     "body": [
+    //         "transform: ${1:translate(0rem, 0rem) rotate(0deg) scale(1.0)};",
+    //     ],
+    //     "description": "幾何変換"
+    // },
+    // "transform3d": {
+    //     "prefix": "trf",
+    //     "body": [
+    //         "transform: ${1:translate3d(0rem,0rem,0rem) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(${1:1.0},${1:1.0},${1:1.0})};",
+    //     ],
+    //     "description": "3D幾何変換"
+    // },
+    // // 透明度
+    // "opacity": {
+    //     "prefix": "op",
+    //     "body": [
+    //         "opacity:@val;",
+    //     ],
+    //     "description": "透明度"
+    // },
+    // // トランジション
+    // "transition": {
+    //     "prefix": "tr",
+    //     "body": [
+    //         "transition: all ${1:linear,ease,ease-in,ease-out,ease-in-out,steps(5,start)} ${2:1}s;",
+    //     ],
+    //     "description": "CSS動的変化時のアニメーション"
+    // },
+    // // キーフレームアニメーション
+    // "keyframe animation": {
+    //     "prefix": "ani",
+    //     "body": [
+    //         "@keyframes ${1:name} {",
+    //         "  0% {}",
+    //         "  100% {}",
+    //         "}",
+    //         "animation: ${1:name} ${2:1}s ${3:linear,ease,ease-in,ease-out,ease-in-out,steps(5,start)} ${4:infinite} ${5:alternative};",
+    //     ],
+    //     "description": "キーフレームアニメーション"
+    // },
+}
