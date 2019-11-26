@@ -5,8 +5,10 @@
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": true,
     "git.autofetch": false,
-    "python.pythonPath": "/usr/bin/python3",
     "python.autoComplete.addBrackets": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.formatting.provider": "black",
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.renderWhitespace": "all",
@@ -33,15 +35,34 @@
     },
     "emmet.triggerExpansionOnTab": true,
     "[javascript]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
     },
     "[javascriptreact]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
     },
     "[typescript]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
     },
     "[typescriptreact]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
     },
+    "[python]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": true
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "cSpell.userWords": [
+        "asdecimal",
+        "jsonify",
+        "mysqlconnector",
+        "sqlite",
+        "strftime",
+        "strptime"
+    ],
+    "python.jediEnabled": false,
 }
