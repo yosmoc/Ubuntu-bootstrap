@@ -21,3 +21,6 @@
 
 - name: copy rust setting to .oh-my-zsh/custom
   template: src=rust.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy nvm setting to .oh-my-zsh/custom
+  template: src=nvm.zsh dest=~/.oh-my-zsh/custom/ mode=0644

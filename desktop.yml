@@ -4,6 +4,7 @@
   become: no
   roles:
     - { role: gnome, tags: [ gnome ] }
+    - { role: nodejs, tags: [ nodejs ] }
     - { role: apt-cli, tags: [ apt-cli ] }
     - { role: apt-gui, tags: [ apt-gui ] }
     - { role: color, tags: [ color ] }
