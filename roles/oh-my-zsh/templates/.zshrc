@@ -65,6 +65,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   docker
+  gcloud
 )
 
 source $ZSH/oh-my-zsh.sh
