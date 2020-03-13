@@ -7,7 +7,7 @@
 
 - name: get latest atom version
   shell: >
-    curl -sI https://github.com/atom/atom/releases/latest | awk -F'/' '/^Location:/{print $NF}'
+    curl -sI https://github.com/atom/atom/releases/latest | awk -F'/' '/^location:/{print $NF}'
   register: atom_latest_version
 
 - name: download latest atom

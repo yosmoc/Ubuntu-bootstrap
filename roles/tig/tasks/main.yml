@@ -7,7 +7,7 @@
 
 - name: Get latest tig version
   shell: >
-    curl -sI https://github.com/jonas/tig/releases/latest | awk -F'/' '/^Location:/{print $NF}'
+    curl -sI https://github.com/jonas/tig/releases/latest | awk -F'/' '/^location:/{print $NF}'
   register: tig_latest_version
 
 - name: Download latest tig

@@ -7,7 +7,7 @@
 
 - name: Get latest peco version
   shell: >
-    curl -sI https://github.com/peco/peco/releases/latest | awk -F'/' '/^Location:/{print $NF}'
+    curl -sI https://github.com/peco/peco/releases/latest | awk -F'/' '/^location:/{print $NF}'
   register: peco_latest_version
 
 - name: Download latest peco
