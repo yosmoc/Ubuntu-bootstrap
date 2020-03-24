@@ -10,25 +10,31 @@
   command: find ~/temp -maxdepth 0
   register: workdir_result
 
-- name: git clone latest tmux
-  git: repo=https://github.com/tmux/tmux.git dest={{ workdir_result.stdout }}/tmux
+- name: Get latest tmux version
+  shell: >
+    curl -sI https://github.com/tmux/tmux/releases/latest | awk -F'/' '/^location:/{print $NF}'
+  register: tmux_latest_version
 
-- name: run autogen.sh
-  command: sh autogen.sh
-  args:
-    chdir: "{{ workdir_result.stdout }}/tmux"
+- name: Download latest tmux
+  get_url: url=https://github.com/tmux/tmux/releases/download/{{ tmux_latest_version.stdout }}/tmux-{{ tmux_latest_version.stdout }}.tar.gz dest={{ workdir_result.stdout }}/tmux.tar.gz
+
+- name: Extract tmux
+  unarchive: src={{ workdir_result.stdout }}/tmux.tar.gz dest={{ workdir_result.stdout }} copy=no
 
 - name: configure tmux
   command: ./configure
   args:
-    chdir: "{{ workdir_result.stdout }}/tmux"
+    chdir: "{{ workdir_result.stdout }}/tmux-{{ tmux_latest_version.stdout }}"
 
 - name: make
-  make: chdir={{ workdir_result.stdout }}/tmux
+  make: chdir={{ workdir_result.stdout }}/tmux-{{ tmux_latest_version.stdout }}
 
 - name: make install
-  make: chdir={{ workdir_result.stdout }}/tmux target=install
+  make: chdir={{ workdir_result.stdout }}/tmux-{{ tmux_latest_version.stdout }} target=install
   become: yes
+
+- name: Install tmux plugin manager
+  git: repo=https://github.com/tmux-plugins/tpm dest=~/.tmux/plugins/tpm
 
 - name: copy .tmux.conf
   template: src=.tmux.conf dest=~/.tmux.conf mode=0644
