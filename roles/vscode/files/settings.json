@@ -19,7 +19,8 @@
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
-        "**/bower_components": true
+        "**/bower_components": true,
+        "**/*.bundle.js*": true
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
