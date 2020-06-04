@@ -44,6 +44,5 @@ function peco-select-tmux-session () {
   fi
 }
 
-if [[ ! -n $TMUX ]]; then
-  peco-select-tmux-session
-fi
+zle -N peco-select-tmux-session
+bindkey '^[' peco-select-tmux-session
