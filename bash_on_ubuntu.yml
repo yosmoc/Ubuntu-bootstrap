@@ -12,6 +12,7 @@
     - { role: ghq, tags: [ ghq ] }
     - { role: git, tags: [ git ] }
     - { role: percol, tags: [ percol ] }
+    - { role: python, tags: [ python ] }
     - { role: vim, tags: [ vim ] }
 
   vars_prompt:
