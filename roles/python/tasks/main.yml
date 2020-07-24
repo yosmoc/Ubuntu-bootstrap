@@ -1,0 +1,5 @@
+- name: clone latest pyenv
+  git:
+    repo: 'https://github.com/pyenv/pyenv.git'
+    dest: '~/.pyenv'
+
