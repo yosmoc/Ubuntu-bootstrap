@@ -1,5 +1,5 @@
 - name: Set ghq.root to $GOPATH/src
-  git_config: name=ghq.root scope=global value=$GOPATH/src
+  git_config: name=ghq.root scope=global value=~/src
 
 - name: set user.name
   git_config: name=user.name scope=global value="{{ user_name }}"
