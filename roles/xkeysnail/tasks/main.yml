@@ -30,7 +30,7 @@
   become: yes
 
 - name: reload udev rules
-  command: udevadm control --reload-rules && udevadm trigger
+  shell: udevadm control --reload-rules && udevadm trigger
   become: yes
 
 - name: create ~/.config/systemd/user/ directory
