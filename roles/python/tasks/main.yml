@@ -1,5 +1,8 @@
-- name: clone latest pyenv
-  git:
-    repo: 'https://github.com/pyenv/pyenv.git'
-    dest: '~/.pyenv'
+- name: check pyenv is installed?
+  command: which pyenv
+  ignore_errors: True
+  register: pyenv_exist
 
+- name: install pyenv
+  shell: curl https://pyenv.run | bash
+  when: pyenv_exist is failed
