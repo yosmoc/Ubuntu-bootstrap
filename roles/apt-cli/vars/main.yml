@@ -13,10 +13,13 @@ apt_packages:
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
+  - { name: nodejs }
+  - { name: npm }
   - { name: pandoc }
   - { name: p7zip }
   - { name: python3 }
   - { name: python3-pip}
+  - { name: pipenv}
   - { name: python3-setuptools }
   - { name: python }
   - { name: python-setuptools }
