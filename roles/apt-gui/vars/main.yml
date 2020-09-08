@@ -3,3 +3,8 @@ apt_packages:
   - { name: ibus-mozc }
   - { name: mplayer }
   - { name: zeal }
+  - { name: keepassx}
+
+snap_packages:
+  - { name: rambox }
+  - { name: slack }
