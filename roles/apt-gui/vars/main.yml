@@ -8,3 +8,4 @@ apt_packages:
 snap_packages:
   - { name: rambox }
   - { name: slack }
+  - { name: mysql-workbench-community }

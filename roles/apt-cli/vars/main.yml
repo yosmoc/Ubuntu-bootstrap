@@ -1,5 +1,5 @@
 apt_packages:
-  - { name: cmigemo }
+  - { name: cmake }
   - { name: cifs-utils }
   - { name: colordiff }
   - { name: emacs }
