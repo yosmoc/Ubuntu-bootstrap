@@ -1,6 +1,7 @@
 apt_packages:
   - { name: gnome-shell-pomodoro }
   - { name: ibus-mozc }
+  - { name: mozc-utils-gui }
   - { name: mplayer }
   - { name: zeal }
   - { name: keepassx}
@@ -9,3 +10,4 @@ snap_packages:
   - { name: rambox }
   - { name: slack }
   - { name: mysql-workbench-community }
+  - { name: spotify}
