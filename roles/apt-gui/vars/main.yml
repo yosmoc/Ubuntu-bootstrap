@@ -5,9 +5,8 @@ apt_packages:
   - { name: mplayer }
   - { name: zeal }
   - { name: keepassx}
+  - { name: mysql-workbench-community }
 
 snap_packages:
   - { name: rambox }
-  - { name: slack }
-  - { name: mysql-workbench-community }
   - { name: spotify}

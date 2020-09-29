@@ -1,4 +1,4 @@
-- name: check vscode is installed?
+- name: check google chrome is installed?
   command: which google-chrome
   ignore_errors: True
   register: chrome_exist

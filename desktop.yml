@@ -14,6 +14,7 @@
     - { role: git, tags: [ git ] }
     - { role: peco, tags: [ peco ] }
     - { role: python, tags: [ python ] }
+    - { role: slack, tags: [ slack ] }
     - { role: vscode, tags: [ vscode ] }
     - { role: usb, tags: [ usb ] }
     - { role: vim, tags: [ vim ] }

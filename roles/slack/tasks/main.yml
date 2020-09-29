@@ -1,0 +1,28 @@
+- name: check slack is installed?
+  command: which slack
+  ignore_errors: True
+  register: slack_exist
+
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+  when: slack_exist is failed
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+  when: slack_exist is failed
+
+- name: download slack
+  get_url: url=https://downloads.slack-edge.com/linux_releases/slack-desktop-4.9.1-amd64.deb dest={{ workdir_result.stdout }}/slack.deb
+  when: slack_exist  is failed
+
+- name: dpkg slack.deb
+  apt: deb={{ workdir_result.stdout }}/slack.deb
+  become: yes
+  when: slack_exist is failed
+
+- name: remove deb file
+  file:
+    path: '{{ workdir_result.stdout }}/slack.deb'
+    state: absent
+  when: slack_exist is failed
