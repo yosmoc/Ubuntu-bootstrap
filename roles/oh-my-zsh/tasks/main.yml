@@ -27,3 +27,6 @@
 
 - name: copy nvm setting to .oh-my-zsh/custom
   template: src=nvm.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy kubernetes setting to .oh-my-zsh/custom
+  template: src=kubernetes.zsh dest=~/.oh-my-zsh/custom/ mode=0644
