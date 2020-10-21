@@ -23,3 +23,4 @@ packages:
   - jpoissonnier.vscode-styled-components
   - xaver.clang-format
   - ms-azuretools.vscode-docker
+  - Rubymaniac.vscode-paste-and-indent

@@ -284,8 +284,18 @@
     },
     {
         "key": "ctrl+y",
-        "command": "editor.action.clipboardPasteAction",
+        "command": "pasteAndIndent.action",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+y",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "ctrl+n",
