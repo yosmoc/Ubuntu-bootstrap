@@ -1,5 +1,12 @@
 apt_packages:
   - { name: gnome-shell-pomodoro }
   - { name: ibus-mozc }
+  - { name: mozc-utils-gui }
   - { name: mplayer }
   - { name: zeal }
+  - { name: keepassx}
+  - { name: mysql-workbench-community }
+
+snap_packages:
+  - { name: rambox }
+  - { name: spotify}

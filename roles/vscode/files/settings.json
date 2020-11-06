@@ -57,6 +57,23 @@
         "editor.formatOnSave": false,
         "editor.formatOnPaste": true
     },
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "gopls": {
+        "usePlaceholders": true,
+        "staticcheck": false,
+    },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

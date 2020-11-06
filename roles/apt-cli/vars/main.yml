@@ -1,11 +1,12 @@
 apt_packages:
-  - { name: cmigemo }
+  - { name: cmake }
   - { name: cifs-utils }
   - { name: colordiff }
   - { name: emacs }
   - { name: gdb-multiarch }
   - { name: gist }
   - { name: git }
+  - { name: git-lfs }
   - { name: golang-go }
   - { name: hexedit }
   - { name: imagemagick }
@@ -13,12 +14,16 @@ apt_packages:
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
+  - { name: nodejs }
+  - { name: npm }
   - { name: pandoc }
   - { name: p7zip }
   - { name: python3 }
   - { name: python3-pip}
+  - { name: pipenv}
+  - { name: python3-setuptools }
   - { name: python }
-  - { name: python-pip }
+  - { name: python-setuptools }
   - { name: rbenv }
   - { name: silversearcher-ag }
   - { name: tree }

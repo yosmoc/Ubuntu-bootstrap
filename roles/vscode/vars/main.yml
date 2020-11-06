@@ -2,7 +2,7 @@ dot_vscode: ~/.config/Code/User
 
 packages:
   - ms-python.python
-  - ms-vscode.go
+  - golang.go
   - hiro-sun.vscode-emacs
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
@@ -10,7 +10,6 @@ packages:
   - waderyan.gitblame
   - ericmccarthy.vs-code-mark-point
   - deerawan.vscode-dash
-  - ms-vscode.vscode-typescript-tslint-plugin
   - msjsdiag.debugger-for-chrome
   - esbenp.prettier-vscode
   - coenraads.bracket-pair-colorizer
@@ -23,3 +22,5 @@ packages:
   - njpwerner.autodocstring
   - jpoissonnier.vscode-styled-components
   - xaver.clang-format
+  - ms-azuretools.vscode-docker
+  - Rubymaniac.vscode-paste-and-indent

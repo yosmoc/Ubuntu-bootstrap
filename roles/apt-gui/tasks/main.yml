@@ -10,3 +10,8 @@
   apt: name="{{ item.name }}" state="{{ item.state|default("latest") }}"
   with_items: "{{apt_packages}}"
   become: yes
+
+- name: install snap packages
+  snap: name="{{ item.name }}" state="{{ item.state|default("present") }}" classic=yes
+  with_items: "{{snap_packages}}"
+  become: yes

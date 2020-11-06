@@ -1,0 +1,28 @@
+- name: check google chrome is installed?
+  command: which google-chrome
+  ignore_errors: True
+  register: chrome_exist
+
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+  when: chrome_exist is failed
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+  when: chrome_exist is failed
+
+- name: download google chrome
+  get_url: url=https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb dest={{ workdir_result.stdout }}/google-chrome.deb
+  when: chrome_exist  is failed
+
+- name: dpkg google-chrome.deb
+  apt: deb={{ workdir_result.stdout }}/google-chrome.deb
+  become: yes
+  when: chrome_exist is failed
+
+- name: remove deb file
+  file:
+    path: '{{ workdir_result.stdout }}/google-chrome.deb'
+    state: absent
+  when: chrome_exist is failed
