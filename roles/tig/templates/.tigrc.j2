@@ -2,6 +2,7 @@ set main-view = id date author commit-title:graph=yes,refs=yes
 set vertical-split = no
 set split-view-height = 75%
 set wrap-lines = yes
+set ignore-case = smart-case
 bind status  C !git commit -v
 bind status  D !@?rm %(file)
 bind main    R !git rebase --autosquash --autostash -i %(commit)
