@@ -6,3 +6,12 @@
 - name: install pyenv
   shell: curl https://pyenv.run | bash
   when: pyenv_exist is failed
+
+- name: check poetry is installed?
+  command: which poetry
+  ignore_errors: True
+  register: poetry_exist
+
+- name: install poetry
+  shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+  when: poetry_exist is failed
