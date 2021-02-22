@@ -15,3 +15,6 @@
 
 - name: disable shortcut Alt+F5
   command: gsettings set org.gnome.desktop.wm.keybindings unmaximize "[]"
+
+- name: disable shortcut Alt+F8
+  command: gsettings set org.gnome.desktop.wm.keybindings begin-resize "[]"
