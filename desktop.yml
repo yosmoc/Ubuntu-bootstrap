@@ -3,6 +3,7 @@
   gather_facts: no
   become: no
   roles:
+    - { role: fff, tags: [ fff ] }
     - { role: gnome, tags: [ gnome ] }
     - { role: apt-cli, tags: [ apt-cli ] }
     - { role: apt-gui, tags: [ apt-gui ] }
