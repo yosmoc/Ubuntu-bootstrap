@@ -31,6 +31,7 @@ apt_packages:
   - { name: vim }
   - { name: vbindiff }
   - { name: wget }
+  - { name: xclip }
   - { name: xsel }
   - { name: zip }
   - { name: zsh }

@@ -2,6 +2,7 @@ export LANG=en_US.UTF-8
 alias ls="ls -a --color=auto"
 alias t="tig"
 alias ta="tig --all"
+alias xclip="xclip -selection c"
 export PATH=$PATH:~/tools
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.yarn/bin
