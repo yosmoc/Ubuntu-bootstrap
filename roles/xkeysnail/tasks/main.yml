@@ -14,9 +14,13 @@
     name: uinput
   become: yes
 
+- name: Run whoami without become.
+  command: whoami
+  register: whoami
+
 - name: add current user in uinput and input group
   user:
-    name: "{{ ansible_user }}"
+    name: "{{ whoami.stdout }}"
     groups: uinput,input
     append: yes
   become: yes

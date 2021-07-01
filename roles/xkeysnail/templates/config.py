@@ -26,8 +26,8 @@ define_multipurpose_modmap(
 )
 
 
-# Keybindings for Firefox/Chrome
-define_keymap(re.compile("Firefox|Google-chrome"), {
+# Keybindings for Firefox/Chrome/Microsoft edge
+define_keymap(re.compile("Firefox|Google-chrome|Microsoft-edge-dev"), {
     # Ctrl+Alt+j/k to switch next/previous tab
     K("C-M-j"): K("C-TAB"),
     K("C-M-k"): K("C-Shift-TAB"),
