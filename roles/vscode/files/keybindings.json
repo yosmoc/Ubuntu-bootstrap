@@ -257,6 +257,16 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "ctrl+shift+i",
+        "command": "-insertDateString.insertDateTime",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "insertDateString.insertTime",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+d",
         "command": "deleteRight",
         "when": "editorTextFocus"

@@ -24,3 +24,5 @@ packages:
   - xaver.clang-format
   - ms-azuretools.vscode-docker
   - Rubymaniac.vscode-paste-and-indent
+  - jsynowiec.vscode-insertdatestring
+  - eamodio.gitlens
