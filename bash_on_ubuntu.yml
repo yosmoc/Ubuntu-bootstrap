@@ -15,6 +15,7 @@
     - { role: percol, tags: [ percol ] }
     - { role: python, tags: [ python ] }
     - { role: vim, tags: [ vim ] }
+    - { role: node, tags: [ node ] }
 
   vars_prompt:
     - name: "user_name"

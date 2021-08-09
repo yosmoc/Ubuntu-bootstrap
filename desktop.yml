@@ -21,6 +21,7 @@
     - { role: vim, tags: [ vim ] }
     - { role: xkeysnail, tags: [ xkeysnail ] }
     - { role: chrome, tags: [ chrome ] }
+    - { role: node, tags: [ node ] }
 
   vars_prompt:
     - name: "user_name"
