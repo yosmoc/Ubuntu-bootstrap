@@ -8,8 +8,8 @@ apt_packages:
   - { name: gist }
   - { name: git }
   - { name: git-lfs }
-  - { name: golang-go }
   - { name: hexedit }
+  - { name: htop }
   - { name: imagemagick }
   - { name: jq }
   - { name: libtool }
@@ -28,6 +28,7 @@ apt_packages:
   - { name: python-setuptools }
   - { name: rbenv }
   - { name: silversearcher-ag }
+  - { name: tldr }
   - { name: tree }
   - { name: vim }
   - { name: vbindiff }
