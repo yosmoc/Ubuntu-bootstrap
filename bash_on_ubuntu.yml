@@ -4,10 +4,9 @@
   become: no
   roles:
     - { role: apt-cli, tags: [ apt-cli ] }
-    - { role: fff, tags: [ fff ] }
+    - { role: oh-my-zsh, tags: [ oh-my-zsh ] }
     - { role: nodejs, tags: [ nodejs ] }
     - { role: color, tags: [ color ] }
-    - { role: oh-my-zsh, tags: [ oh-my-zsh ] }
     - { role: tig, tags: [ tig ] }
     - { role: tmux, tags: [ tmux ] }
     - { role: ghq, tags: [ ghq ] }
@@ -16,6 +15,7 @@
     - { role: python, tags: [ python ] }
     - { role: vim, tags: [ vim ] }
     - { role: node, tags: [ node ] }
+    - { role: fff, tags: [ fff ] }
 
   vars_prompt:
     - name: "user_name"
