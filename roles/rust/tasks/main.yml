@@ -1,0 +1,15 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: download rustup
+  get_url:
+    url: "https://sh.rustup.rs"
+    dest: "{{ workdir_result.stdout }}/rustup"
+    mode: 'u+rwx'
+
+- name: install rust
+  shell: "{{ workdir_result.stdout }}/rustup -y"

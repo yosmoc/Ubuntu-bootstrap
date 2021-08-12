@@ -13,6 +13,7 @@
     - { role: git, tags: [ git ] }
     - { role: percol, tags: [ percol ] }
     - { role: python, tags: [ python ] }
+    - { role: rust, tags: [ rust ] }
     - { role: vim, tags: [ vim ] }
     - { role: node, tags: [ node ] }
     - { role: fff, tags: [ fff ] }
