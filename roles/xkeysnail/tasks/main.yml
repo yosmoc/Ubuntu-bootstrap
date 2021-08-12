@@ -2,6 +2,7 @@
   pip:
     name: xkeysnail
     executable: pip3
+  become: yes
 
 - name: create ~/.xkeysnail/ directory
   file: path=~/.xkeysnail/ state=directory mode=0755
