@@ -27,3 +27,4 @@ packages:
   - jsynowiec.vscode-insertdatestring
   - eamodio.gitlens
   - satokaz.vscode-memo-life-for-you
+  - alefragnani.project-manager
