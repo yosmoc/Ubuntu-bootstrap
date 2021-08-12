@@ -1,5 +1,6 @@
 apt_packages:
   - { name: cmake }
+  - { name: curl }
   - { name: cifs-utils }
   - { name: colordiff }
   - { name: emacs }
