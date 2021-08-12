@@ -10,10 +10,10 @@
     - { role: color, tags: [ color ] }
     - { role: tig, tags: [ tig ] }
     - { role: tmux, tags: [ tmux ] }
-    - { role: ghq, tags: [ ghq ] }
+    - { role: python, tags: [ python ] }
+    - { role: go, tags: [ go ] }
     - { role: git, tags: [ git ] }
     - { role: peco, tags: [ peco ] }
-    - { role: python, tags: [ python ] }
     - { role: rust, tags: [ rust ] }
     - { role: slack, tags: [ slack ] }
     - { role: vscode, tags: [ vscode ] }
@@ -22,6 +22,7 @@
     - { role: xkeysnail, tags: [ xkeysnail ] }
     - { role: chrome, tags: [ chrome ] }
     - { role: node, tags: [ node ] }
+    - { role: ghq, tags: [ ghq ] }
     - { role: fff, tags: [ fff ] }
 
   vars_prompt:

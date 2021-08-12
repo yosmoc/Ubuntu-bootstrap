@@ -1,0 +1,13 @@
+- name: Get filename prefix with latest version
+  set_fact:
+    filename_prefix: "{{ lookup('url', 'https://golang.org/VERSION?m=text', split_lines=False) }}"
+
+- name: Download and extract the archive {{ filename_prefix }}.linux-amd64.tar.gz"
+  unarchive:
+      src: "https://dl.google.com/go/{{ filename_prefix }}.linux-amd64.tar.gz"
+      dest: /usr/local
+      remote_src: yes
+  become: yes
+
+- name: copy go setting to .oh-my-zsh/custom
+  template: src=go.zsh dest=~/.oh-my-zsh/custom/ mode=0644

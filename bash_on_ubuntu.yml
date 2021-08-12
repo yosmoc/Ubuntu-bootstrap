@@ -11,8 +11,9 @@
     - { role: tmux, tags: [ tmux ] }
     - { role: ghq, tags: [ ghq ] }
     - { role: git, tags: [ git ] }
-    - { role: percol, tags: [ percol ] }
+    - { role: go, tags: [ go ] }
     - { role: python, tags: [ python ] }
+    - { role: percol, tags: [ percol ] }
     - { role: rust, tags: [ rust ] }
     - { role: vim, tags: [ vim ] }
     - { role: node, tags: [ node ] }
