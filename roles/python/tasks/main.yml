@@ -15,3 +15,9 @@
 - name: install poetry
   shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
   when: poetry_exist is failed
+
+- name: add poetry oh-my-zsh plugin folder
+  file: path=~/.oh-my-zsh/custom/plugins/poetry state=directory mode=0755
+
+- name: install poetry completions
+  shell: poetry completions zsh > ~/.oh-my-zsh/custom/plugins/poetry/_poetry
