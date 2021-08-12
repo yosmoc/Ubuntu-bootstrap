@@ -1,5 +1,7 @@
 - name: Install ghq
-  command: go get github.com/motemen/ghq
+  shell: . ~/.zshrc && go get github.com/x-motemen/ghq
+  args:
+    executable: /usr/bin/zsh
 
 # - name: Install github-list-starred
 #   command: go get github.com/motemen/github-list-starred
