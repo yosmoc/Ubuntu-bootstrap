@@ -21,3 +21,11 @@
 
 - name: install poetry completions
   shell: poetry completions zsh > ~/.oh-my-zsh/custom/plugins/poetry/_poetry
+
+- name: Installing pipx
+  pip:
+    name: pipx
+    executable: pip3
+
+- name: Install ipython
+  shell: pipx install ipython
