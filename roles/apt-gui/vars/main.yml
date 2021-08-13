@@ -1,5 +1,5 @@
 apt_packages:
-  - { name: gnome-shell-pomodoro }
+  - { name: gnome-clocks }
   - { name: ibus-mozc }
   - { name: mozc-utils-gui }
   - { name: mplayer }
