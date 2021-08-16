@@ -1,8 +1,5 @@
-- name: Installing xkeysnail
-  pip:
-    name: xkeysnail
-    executable: pip3
-  become: yes
+- name: Install xkeysnail
+  shell: pipx install xkeysnail
 
 - name: create ~/.xkeysnail/ directory
   file: path=~/.xkeysnail/ state=directory mode=0755
