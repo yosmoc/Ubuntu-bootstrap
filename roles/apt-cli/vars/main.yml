@@ -12,6 +12,7 @@ apt_packages:
   - { name: htop }
   - { name: imagemagick }
   - { name: jq }
+  - { name: lftp }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
