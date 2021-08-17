@@ -55,7 +55,7 @@
     },
     "[python]": {
         "editor.formatOnSave": false,
-        "editor.formatOnPaste": true
+        "editor.formatOnPaste": true,
     },
     "go.useLanguageServer": true,
     "[go]": {
@@ -80,12 +80,32 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "cSpell.userWords": [
+        "Kubernetes",
         "asdecimal",
+        "contentful",
+        "getenv",
+        "ioexpanders",
         "jsonify",
+        "lund",
         "mysqlconnector",
+        "nums",
+        "silabs",
         "sqlite",
         "strftime",
-        "strptime"
+        "strptime",
     ],
     "python.jediEnabled": false,
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoImportCompletions": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.fontSize": 12,
+    "insertDateString.format": "hh:mm:ss",
 }
