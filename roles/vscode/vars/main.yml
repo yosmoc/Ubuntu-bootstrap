@@ -7,6 +7,8 @@ packages:
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
   - ms-vscode.cpptools
+  - ms-vscode-remote.remote-containers
+  - ms-vscode-remote.remote-ssh
   - waderyan.gitblame
   - ericmccarthy.vs-code-mark-point
   - deerawan.vscode-dash

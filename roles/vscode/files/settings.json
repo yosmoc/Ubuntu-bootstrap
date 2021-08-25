@@ -108,4 +108,14 @@
     },
     "editor.fontSize": 12,
     "insertDateString.format": "hh:mm:ss",
+    "remote.containers.defaultExtensions": [
+        "eamodio.gitlens",
+        "Rubymaniac.vscode-paste-and-indent",
+        "ericmccarthy.vs-code-mark-point",
+    ],
+    "remote.SSH.defaultExtensions": [
+        "eamodio.gitlens",
+        "Rubymaniac.vscode-paste-and-indent",
+        "ericmccarthy.vs-code-mark-point",
+    ]
 }
