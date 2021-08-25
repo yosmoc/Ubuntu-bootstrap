@@ -18,6 +18,7 @@ apt_packages:
   - { name: mosh }
   - { name: nodejs }
   - { name: npm }
+  - { name: openssh-server }
   - { name: pandoc }
   - { name: p7zip }
   - { name: python3 }
