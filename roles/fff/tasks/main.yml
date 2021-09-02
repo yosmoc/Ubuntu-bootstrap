@@ -17,7 +17,7 @@
     remote_src: yes
 
 - name: Copy to /usr/bin/
-  copy: src="{{ workdir_result.stdout }}/fff-{{ fff_latest_version.stdout }}/fff" dest=/usr/bin/fff
+  copy: src="{{ workdir_result.stdout }}/fff-{{ fff_latest_version.stdout }}/fff" dest=/usr/bin/fff mode=0755
   become: yes
 
 - name: copy fff setting to .oh-my-zsh/custom
