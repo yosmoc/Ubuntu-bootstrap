@@ -1,10 +1,11 @@
 apt_packages:
   - { name: gnome-clocks }
+  - { name: gnome-tweaks }
   - { name: ibus-mozc }
   - { name: mozc-utils-gui }
   - { name: mplayer }
   - { name: zeal }
-  - { name: keepassx}
+  - { name: keepassx }
 
 snap_packages:
   - { name: rambox }
