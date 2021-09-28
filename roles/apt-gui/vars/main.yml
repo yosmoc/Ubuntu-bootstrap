@@ -1,11 +1,11 @@
 apt_packages:
-  - { name: gnome-shell-pomodoro }
+  - { name: gnome-clocks }
+  - { name: gnome-tweaks }
   - { name: ibus-mozc }
   - { name: mozc-utils-gui }
   - { name: mplayer }
   - { name: zeal }
-  - { name: keepassx}
-  - { name: mysql-workbench-community }
+  - { name: keepassx }
 
 snap_packages:
   - { name: rambox }

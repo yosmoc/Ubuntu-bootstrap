@@ -26,8 +26,8 @@ define_multipurpose_modmap(
 )
 
 
-# Keybindings for Firefox/Chrome
-define_keymap(re.compile("Firefox|Google-chrome"), {
+# Keybindings for Firefox/Chrome/Microsoft edge
+define_keymap(re.compile("Firefox|Google-chrome|Microsoft-edge-dev"), {
     # Ctrl+Alt+j/k to switch next/previous tab
     K("C-M-j"): K("C-TAB"),
     K("C-M-k"): K("C-Shift-TAB"),
@@ -51,7 +51,7 @@ define_keymap(re.compile("Code"), {
 }, "Code")
 
 # Emacs-like keybindings in non-Emacs applications
-define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Code", "Code - Insiders", "Gnome-terminal", "Remmina", "figma-linux"), {
+define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Code", "Code - Insiders", "Gnome-terminal", "org.remmina.Remmina", "figma-linux"), {
     # Cursor
     K("C-b"): with_mark(K("left")),
     K("C-f"): with_mark(K("right")),

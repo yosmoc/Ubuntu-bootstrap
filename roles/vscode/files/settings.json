@@ -55,7 +55,7 @@
     },
     "[python]": {
         "editor.formatOnSave": false,
-        "editor.formatOnPaste": true
+        "editor.formatOnPaste": true,
     },
     "go.useLanguageServer": true,
     "[go]": {
@@ -80,12 +80,48 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "cSpell.userWords": [
+        "Kubernetes",
+        "Modul",
+        "YOSMOC",
         "asdecimal",
+        "contentful",
+        "getenv",
+        "ioexpanders",
         "jsonify",
+        "lund",
+        "modcon",
         "mysqlconnector",
+        "nums",
+        "prodtest",
+        "pynarutils",
+        "silabs",
         "sqlite",
         "strftime",
-        "strptime"
+        "strptime",
+        "telematics"
     ],
     "python.jediEnabled": false,
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoImportCompletions": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.fontSize": 12,
+    "insertDateString.formatTime": "hh:mm",
+    "remote.containers.defaultExtensions": [
+        "eamodio.gitlens",
+        "Rubymaniac.vscode-paste-and-indent",
+        "ericmccarthy.vs-code-mark-point",
+    ],
+    "remote.SSH.defaultExtensions": [
+        "eamodio.gitlens",
+        "Rubymaniac.vscode-paste-and-indent",
+        "ericmccarthy.vs-code-mark-point",
+    ]
 }

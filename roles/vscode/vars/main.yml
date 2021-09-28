@@ -7,6 +7,8 @@ packages:
   - christian-kohler.path-intellisense
   - dbaeumer.vscode-eslint
   - ms-vscode.cpptools
+  - ms-vscode-remote.remote-containers
+  - ms-vscode-remote.remote-ssh
   - waderyan.gitblame
   - ericmccarthy.vs-code-mark-point
   - deerawan.vscode-dash
@@ -24,3 +26,7 @@ packages:
   - xaver.clang-format
   - ms-azuretools.vscode-docker
   - Rubymaniac.vscode-paste-and-indent
+  - jsynowiec.vscode-insertdatestring
+  - eamodio.gitlens
+  - satokaz.vscode-memo-life-for-you
+  - alefragnani.project-manager

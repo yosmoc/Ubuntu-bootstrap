@@ -6,20 +6,24 @@
     - { role: gnome, tags: [ gnome ] }
     - { role: apt-cli, tags: [ apt-cli ] }
     - { role: apt-gui, tags: [ apt-gui ] }
-    - { role: color, tags: [ color ] }
     - { role: oh-my-zsh, tags: [ oh-my-zsh ] }
+    - { role: color, tags: [ color ] }
     - { role: tig, tags: [ tig ] }
     - { role: tmux, tags: [ tmux ] }
-    - { role: ghq, tags: [ ghq ] }
+    - { role: python, tags: [ python ] }
+    - { role: go, tags: [ go ] }
     - { role: git, tags: [ git ] }
     - { role: peco, tags: [ peco ] }
-    - { role: python, tags: [ python ] }
+    - { role: rust, tags: [ rust ] }
     - { role: slack, tags: [ slack ] }
     - { role: vscode, tags: [ vscode ] }
     - { role: usb, tags: [ usb ] }
     - { role: vim, tags: [ vim ] }
     - { role: xkeysnail, tags: [ xkeysnail ] }
     - { role: chrome, tags: [ chrome ] }
+    - { role: node, tags: [ node ] }
+    - { role: ghq, tags: [ ghq ] }
+    - { role: fff, tags: [ fff ] }
 
   vars_prompt:
     - name: "user_name"

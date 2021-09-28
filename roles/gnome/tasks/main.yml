@@ -12,3 +12,12 @@
 
 - name: disable screen rotate
   command: gsettings set org.gnome.settings-daemon.plugins.orientation active false
+
+- name: disable shortcut Alt+F5
+  command: gsettings set org.gnome.desktop.wm.keybindings unmaximize "[]"
+
+- name: disable shortcut Alt+F8
+  command: gsettings set org.gnome.desktop.wm.keybindings begin-resize "[]"
+
+- name: set blank screen never
+  command: gsettings set org.gnome.desktop.session idle-delay 0

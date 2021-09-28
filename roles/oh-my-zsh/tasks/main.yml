@@ -10,14 +10,11 @@
 - name: copy general setting to .oh-my-zsh/ghc
   template: src=ghc.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 
-- name: copy golang setting to .oh-my-zsh/custom
-  template: src=go.zsh dest=~/.oh-my-zsh/custom/ mode=0644
-
 - name: copy rbenv setting to .oh-my-zsh/custom
   template: src=rbenv.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 
-- name: copy pyenv setting to .oh-my-zsh/custom
-  template: src=pyenv.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+- name: copy python setting to .oh-my-zsh/custom
+  template: src=python.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 
 - name: copy color setting to .oh-my-zsh/custom
   template: src=color.zsh dest=~/.oh-my-zsh/custom/ mode=0644
@@ -25,8 +22,8 @@
 - name: copy rust setting to .oh-my-zsh/custom
   template: src=rust.zsh dest=~/.oh-my-zsh/custom/ mode=0644
 
-- name: copy nvm setting to .oh-my-zsh/custom
-  template: src=nvm.zsh dest=~/.oh-my-zsh/custom/ mode=0644
-
 - name: copy kubernetes setting to .oh-my-zsh/custom
   template: src=kubernetes.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy keybinding setting to .oh-my-zsh/custom
+  template: src=keybinding.zsh dest=~/.oh-my-zsh/custom/ mode=0644

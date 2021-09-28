@@ -1,0 +1,7 @@
+- name: setup 14.x
+  shell: 'curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -'
+  become: yes
+
+- name: Install nodejs 14.x
+  apt: name=nodejs state=present
+  become: yes

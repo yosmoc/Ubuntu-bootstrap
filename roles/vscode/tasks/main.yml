@@ -13,7 +13,7 @@
   when: code_exist is failed
 
 - name: download visual-studio-code
-  get_url: url=https://vscode-update.azurewebsites.net/1.15.1/linux-deb-x64/stable dest={{ workdir_result.stdout }}/vscode.deb
+  get_url: url=https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 dest={{ workdir_result.stdout }}/vscode.deb
   when: code_exist is failed
 
 - name: dpkg vscode.deb

@@ -1,5 +1,6 @@
 apt_packages:
   - { name: cmake }
+  - { name: curl }
   - { name: cifs-utils }
   - { name: colordiff }
   - { name: emacs }
@@ -7,29 +8,36 @@ apt_packages:
   - { name: gist }
   - { name: git }
   - { name: git-lfs }
-  - { name: golang-go }
   - { name: hexedit }
+  - { name: htop }
   - { name: imagemagick }
   - { name: jq }
+  - { name: lftp }
   - { name: libtool }
   - { name: mercurial }
   - { name: mosh }
   - { name: nodejs }
   - { name: npm }
+  - { name: ncdu }
+  - { name: openssh-server }
   - { name: pandoc }
   - { name: p7zip }
   - { name: python3 }
+  - { name: python-is-python3 }
   - { name: python3-pip}
+  - { name: python3.8-venv }
   - { name: pipenv}
   - { name: python3-setuptools }
   - { name: python }
   - { name: python-setuptools }
   - { name: rbenv }
   - { name: silversearcher-ag }
+  - { name: tldr }
   - { name: tree }
   - { name: vim }
   - { name: vbindiff }
   - { name: wget }
+  - { name: xclip }
   - { name: xsel }
   - { name: zip }
   - { name: zsh }
