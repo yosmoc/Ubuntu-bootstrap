@@ -1,5 +1,11 @@
+- name: check xkeysnail is installed?
+  command: which xkeysnail
+  ignore_errors: True
+  register: xkeysnail_exist
+
 - name: Install xkeysnail
   shell: pipx install xkeysnail
+  when: xkeysnail_exist is failed
 
 - name: create ~/.xkeysnail/ directory
   file: path=~/.xkeysnail/ state=directory mode=0755
