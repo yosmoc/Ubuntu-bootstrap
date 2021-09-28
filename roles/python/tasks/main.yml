@@ -27,5 +27,11 @@
     name: pipx
     executable: pip3
 
+- name: check ipython is installed?
+  command: which ipython
+  ignore_errors: True
+  register: ipython_exist
+
 - name: Install ipython
   shell: pipx install ipython
+  when: ipython_exist is failed
