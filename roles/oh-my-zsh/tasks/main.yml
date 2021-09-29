@@ -27,3 +27,6 @@
 
 - name: copy keybinding setting to .oh-my-zsh/custom
   template: src=keybinding.zsh dest=~/.oh-my-zsh/custom/ mode=0644
+
+- name: copy custome theme to .oh-my-zsh/custom/themes
+  template: src=robbyrussell.zsh-theme dest=~/.oh-my-zsh/custom/themes/
