@@ -10,7 +10,6 @@ My personal settings for Ubuntu linux.
 ## Install ansible
 
 ```
-$ sudo apt-add-repository ppa:ansible/ansible
 $ sudo apt-get update
 $ sudo apt-get install ansible
 ```
@@ -26,6 +25,8 @@ For bash on ubuntu on Windows
 For desktop linux
 
 ## Usage
+
+Some of the roles needs to run on zsh. So, first you need to run this script on zsh.
 
 ### Run all roles
 
