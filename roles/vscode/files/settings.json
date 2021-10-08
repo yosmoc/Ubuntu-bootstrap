@@ -123,5 +123,6 @@
         "eamodio.gitlens",
         "Rubymaniac.vscode-paste-and-indent",
         "ericmccarthy.vs-code-mark-point",
-    ]
+    ],
+    "terminal.integrated.allowChords": false
 }

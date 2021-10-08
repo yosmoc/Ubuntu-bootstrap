@@ -124,7 +124,7 @@
     {
         "key": "ctrl+e",
         "command": "cursorEnd",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && terminalFocus"
     },
     {
         "key": "alt+f",
@@ -289,7 +289,7 @@
     {
         "key": "ctrl+k",
         "command": "editor.action.clipboardCutAction",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && terminalFocus"
     },
     {
         "key": "alt+w",
