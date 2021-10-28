@@ -21,3 +21,6 @@
 
 - name: set blank screen never
   command: gsettings set org.gnome.desktop.session idle-delay 0
+
+- name: set mouse cursor bigger
+  command: gsettings set org.gnome.desktop.interface cursor-size 32
