@@ -81,15 +81,12 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "cSpell.userWords": [
         "Kubernetes",
-        "Modul",
-        "YOSMOC",
         "asdecimal",
         "contentful",
         "getenv",
         "ioexpanders",
         "jsonify",
         "lund",
-        "modcon",
         "mysqlconnector",
         "nums",
         "prodtest",
@@ -98,7 +95,6 @@
         "sqlite",
         "strftime",
         "strptime",
-        "telematics"
     ],
     "python.jediEnabled": false,
     "python.languageServer": "Pylance",
@@ -124,5 +120,21 @@
         "Rubymaniac.vscode-paste-and-indent",
         "ericmccarthy.vs-code-mark-point",
     ],
-    "terminal.integrated.allowChords": false
+    "terminal.integrated.allowChords": false,
+    "go.delveConfig": {
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 1,
+            "maxStringLen": 64,
+            "maxArrayValues": 64,
+            "maxStructFields": -1
+        },
+        "apiVersion": 2,
+        "showGlobalVariables": false,
+        "debugAdapter": "legacy",
+        "substitutePath": []
+    },
+    "go.formatTool": "goimports",
+    "editor.inlineSuggest.enabled": true,
+    "go.toolsManagement.autoUpdate": true,
 }
