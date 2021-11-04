@@ -39,3 +39,29 @@
 
 - name: upgrade gibo
   command: ~/bin/gibo update
+
+- name: Create temporary build directory
+  ansible.builtin.tempfile:
+    state: directory
+  register: tmpdir
+
+- name: download github cli gpg key
+  get_url:
+    url: https://cli.github.com/packages/githubcli-archive-keyring.gpg
+    dest: "{{ tmpdir.path }}/githubcli-archive-keyring.gpg"
+
+- name: register github cli gpg key
+  command: gpg --yes --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg {{ tmpdir.path}}/githubcli-archive-keyring.gpg
+  become: yes
+
+- name: add github cli apt source list
+  copy: src=github-cli.list dest=/etc/apt/sources.list.d/github-cli.list
+  become: yes
+
+- name: apt-get update
+  apt: update_cache=yes
+  become: yes
+
+- name: install github cli
+  apt: name="gh"
+  become: yes
