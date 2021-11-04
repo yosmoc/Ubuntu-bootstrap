@@ -31,6 +31,9 @@
 - name: set pull.rebase
   git_config: name=pull.rebase scope=global value=true
 
+- name: set init.defaultBranch
+  git_config: name=init.defaultBranch scope=global value=main
+
 - name: download gibo
   get_url: url="https://raw.github.com/simonwhitaker/gibo/master/gibo" dest=~/bin/
 
