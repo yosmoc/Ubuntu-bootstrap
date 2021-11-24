@@ -24,6 +24,7 @@
     - { role: node, tags: [ node ] }
     - { role: ghq, tags: [ ghq ] }
     - { role: fff, tags: [ fff ] }
+    - { role: container, tags: [ container ]}
 
   vars_prompt:
     - name: "user_name"
