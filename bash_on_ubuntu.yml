@@ -17,6 +17,7 @@
     - { role: rust, tags: [ rust ] }
     - { role: vim, tags: [ vim ] }
     - { role: node, tags: [ node ] }
+    - { role: hashicorp, tags: [ hashicorp ] }
     - { role: fff, tags: [ fff ] }
 
   vars_prompt:

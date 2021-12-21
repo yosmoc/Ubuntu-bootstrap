@@ -26,6 +26,7 @@
     - { role: ghq, tags: [ ghq ] }
     - { role: fff, tags: [ fff ] }
     - { role: container, tags: [ container ]}
+    - { role: hashicorp, tags: [ hashicorp ] }
 
   vars_prompt:
     - name: "user_name"
