@@ -1,0 +1,23 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: Get apt config file
+  get_url:
+    url: https://repo.mysql.com//mysql-apt-config_0.8.20-1_all.deb
+    dest: "{{ workdir_result.stdout }}/mysql-apt-config.deb"
+
+- name: Install config
+  apt:
+    deb: "{{ workdir_result.stdout }}/mysql-apt-config.deb"
+  become: yes
+
+- name: Install MySQL Workbench Community
+  apt:
+    name: mysql-workbench-community
+    update_cache: yes
+  become: yes
+

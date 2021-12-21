@@ -17,6 +17,7 @@
     - { role: rust, tags: [ rust ] }
     - { role: slack, tags: [ slack ] }
     - { role: vscode, tags: [ vscode ] }
+    - { role: mysql-workbench, tags: [ mysql-workbench ] }
     - { role: usb, tags: [ usb ] }
     - { role: vim, tags: [ vim ] }
     - { role: xkeysnail, tags: [ xkeysnail ] }
