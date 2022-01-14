@@ -137,4 +137,7 @@
     "go.formatTool": "goimports",
     "editor.inlineSuggest.enabled": true,
     "go.toolsManagement.autoUpdate": true,
+    "jupyter.askForKernelRestart": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active"
 }
