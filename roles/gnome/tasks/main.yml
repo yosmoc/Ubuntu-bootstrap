@@ -1,3 +1,26 @@
+- name: create a working directory
+  file: path=~/temp/ state=directory mode=0755
+
+- name: register a working directory full path
+  command: find ~/temp -maxdepth 0
+  register: workdir_result
+
+- name: Get latest pop shell version
+  shell: >
+    curl -sI https://github.com/pop-os/shell/releases/latest | awk -F'/' '/^location:/{print $NF}'
+  register: popshell_latest_version
+
+- name: Download latest pop shell
+  get_url: url=https://github.com/pop-os/shell/archive/refs/tags/{{ popshell_latest_version.stdout }}.tar.gz dest={{ workdir_result.stdout }}/popshell.tar.gz
+
+- name: Extract pop shell
+  unarchive: src={{ workdir_result.stdout }}/popshell.tar.gz dest={{ workdir_result.stdout }} copy=no
+
+- name: pop shell make local-install
+  make:
+    chdir: "{{ workdir_result.stdout }}/shell-{{ popshell_latest_version.stdout }}"
+    target: local-install
+
 - name: copy gtk setting to ~/.config/gtk-3.0/
   template: src=gtk.css dest=~/.config/gtk-3.0/ mode=0644
 

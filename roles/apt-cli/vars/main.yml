@@ -17,6 +17,7 @@ apt_packages:
   - { name: mercurial }
   - { name: mosh }
   - { name: nodejs }
+  - { name: node-typescript }
   - { name: npm }
   - { name: ncdu }
   - { name: openssh-server }
