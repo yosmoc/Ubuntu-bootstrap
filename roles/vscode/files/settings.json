@@ -139,5 +139,6 @@
     "go.toolsManagement.autoUpdate": true,
     "jupyter.askForKernelRestart": false,
     "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs":"active"
+    "editor.guides.bracketPairs":"active",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_"
 }
