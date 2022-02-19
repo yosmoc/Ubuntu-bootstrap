@@ -1,6 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "workbench.welcome.enabled": false,
+    "editor.copyWithSyntaxHighlighting": false,
     "files.autoSave": "onFocusChange",
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": true,
