@@ -31,3 +31,6 @@ packages:
   - satokaz.vscode-memo-life-for-you
   - alefragnani.project-manager
   - mushan.vscode-paste-image
+  - mtxr.sqltools
+  - mtxr.sqltools-driver-mysql
+  - mtxr.sqltools-driver-pg
