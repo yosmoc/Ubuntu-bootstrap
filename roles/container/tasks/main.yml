@@ -35,3 +35,21 @@
       - containerd.io
     update_cache: yes
   become: yes
+
+- name: create cli plugin directory
+  file: path=~/.docker/cli-plugins state=directory mode=0755
+
+- name: Get latest docker compose version
+  shell: >
+    curl -sI https://github.com/docker/compose/releases/latest | awk -F'/' '/^location:/{print $NF}'
+  register: compose_latest_version
+
+- name: register a cli plugin directory full path
+  command: find ~/.docker/cli-plugins -maxdepth 0
+  register: cli_plugin_dir
+
+- name: Install latest docker compose v2
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ compose_latest_version.stdout }}/docker-compose-linux-x86_64"
+    dest: "{{ cli_plugin_dir.stdout }}/docker-compose"
+    mode: '755'
