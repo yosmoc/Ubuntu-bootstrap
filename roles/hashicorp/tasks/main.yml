@@ -32,3 +32,6 @@
       - terraform
     update_cache: yes
   become: yes
+
+- name: copy terraform setting to .oh-my-zsh/custom
+  template: src=terraform.zsh dest=~/.oh-my-zsh/custom/ mode=0644
