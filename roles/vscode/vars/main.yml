@@ -34,3 +34,4 @@ packages:
   - mtxr.sqltools
   - mtxr.sqltools-driver-mysql
   - mtxr.sqltools-driver-pg
+  - hashicorp.terraform
