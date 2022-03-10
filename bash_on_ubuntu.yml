@@ -18,6 +18,7 @@
     - { role: vim, tags: [ vim ] }
     - { role: node, tags: [ node ] }
     - { role: hashicorp, tags: [ hashicorp ] }
+    - { role: gcp, tags: [ gcp ] }
     - { role: fff, tags: [ fff ] }
 
   vars_prompt:

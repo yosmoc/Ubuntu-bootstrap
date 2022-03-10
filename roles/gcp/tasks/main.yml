@@ -1,0 +1,27 @@
+- name: install dependency packages
+  apt:
+    pkg:
+    - ca-certificates
+    - gnupg
+    - apt-transport-https
+    update_cache: yes
+  become: yes
+
+- name: add gcloud cli distribution uri as a package resource
+  shell: >
+    echo
+    "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" |
+    sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list > /dev/null
+  become: yes
+
+- name: get google cloud official gpg key
+  shell: >
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share/keyrings/cloud.google.gpg > /dev/null
+  become: yes
+
+- name: Install google cloud tools
+  apt:
+    pkg:
+      - google-cloud-cli
+    update_cache: yes
+  become: yes
