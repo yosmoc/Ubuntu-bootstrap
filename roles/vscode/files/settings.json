@@ -141,5 +141,6 @@
     "jupyter.askForKernelRestart": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs":"active",
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_"
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+    "terminal.integrated.persistentSessionReviveProcess": "never"
 }
