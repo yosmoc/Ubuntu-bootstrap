@@ -3,10 +3,16 @@ set vertical-split = no
 set split-view-height = 75%
 set wrap-lines = yes
 set ignore-case = smart-case
-bind status  C !git commit -v
-bind status  D !@?rm %(file)
-bind main    R !git rebase --autosquash --autostash -i %(commit)
-bind diff    R !git rebase --autosquash --autostash -i %(commit)
-bind main    F !git commit --fixup %(commit)
-bind diff    F !git commit --fixup %(commit)
-bind main    c ?git checkout %(commit)
+set refresh-mode = auto
+bind status  C  !git commit -v
+bind status  D  !@?rm %(file)
+bind main    R  !git rebase --autosquash --autostash -i %(commit)
+bind diff    R  !git rebase --autosquash --autostash -i %(commit)
+bind main    F  !git commit --fixup %(commit)
+bind diff    F  !git commit --fixup %(commit)
+bind main    c  ?git checkout %(commit)
+bind generic U  >git pull %(remote)
+bind generic PP ?!>git push -u %(remote) %(repo:head)
+bind generic PF ?!>git push --force-with-lease %(remote) %(repo:head)
+bind generic A  !>git commit --amend --allow-empty
+bind generic W  !>gh pr view --web
